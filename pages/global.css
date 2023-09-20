@@ -1,0 +1,54 @@
+h1, h2, h3, h4, h5, h6 {
+  margin:0;
+}
+
+.flx {
+  display: flex;
+}
+
+.highlight {
+  color: #016767;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 4;
+}
+
+.reel-wrapper {
+  z-index: -1;
+  inset: 0;
+}
+.reel-wrapper .reel {
+  position: relative;
+  width: 100%;
+  top: auto;
+  right: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+.section:not(.fp-auto-height) .fp-overflow, 
+.section:not(.fp-auto-height) .section-wrapper {
+  height: 100vh;
+}
+
+.section .fp-overflow {
+  background: rgb(48,244,98);
+  background: radial-gradient(at 100% bottom, rgba(48,244,98,1) 35%, rgba(9,210,98,1) 65%);
+}
+
+.section.section-home .fp-overflow {
+  background: none;
+}
+
+.section .section-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
