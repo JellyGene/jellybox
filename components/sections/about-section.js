@@ -1,7 +1,7 @@
 // pages/about.js (About page)
 import React from "react";
-import Image from "next/image"
-import Blob from "../content/blob"
+import Image from "next/image";
+import Blob from "../content/blob";
 
 const AboutSection = () => {
   return (
@@ -22,8 +22,15 @@ const AboutSection = () => {
       </div>
       <div className="flx-col">
         <Blob title="A Cute Lil' Animation Studio">
-          <p>A one-stop shop for all<br />your animation needs!</p>
-          <p>We've got over 20 years of experience, and we would absolutely love to help you bring your ideas to life!</p>
+          <p>
+            A one-stop shop for all
+            <br />
+            your animation needs!
+          </p>
+          <p>
+            We&apos;ve got over 20 years of experience, and we would absolutely
+            love to help you bring your ideas to life!
+          </p>
         </Blob>
       </div>
     </div>
@@ -45,4 +52,4 @@ got an established audience, or if you have an
 original idea and want to expand your fanbase,
 we'll help you create a consistent pipeline of
 amazing animated shorts!
-`
+`;
