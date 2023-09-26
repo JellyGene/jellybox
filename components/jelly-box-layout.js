@@ -37,9 +37,6 @@ function JellyBoxLayout({ children }) {
           const destinationIndex = destination.index;
           const pages = ['/', '/about', '/services', '/work', '/contact'];
 
-          console.log(destinationIndex)
-          console.log({ origin, destination })
-
           if (router.pathname !== pages[destinationIndex] && origin.index === destinationIndex) {
             const incomingSection = pages.findIndex(item => item === router.pathname);
             console.log('same page: ', {incomingSection, active: fullpage_api.getActiveSection()})

@@ -9,6 +9,10 @@ h6 {
 
 .flx {
   display: flex;
+  flex-wrap: wrap;
+}
+.flx.column {
+  flex-direction: column;
 }
 .flx.spaced {
   justify-content: space-between;
@@ -22,6 +26,14 @@ h6 {
 
 .highlight {
   color: #016767;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+
+.container {
+  width: 1033px;
+  max-width: 98%;
 }
 
 .menu {
@@ -93,4 +105,78 @@ h6 {
   align-items: center;
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+.drop {
+  display: block;
+  position: relative;
+  border-radius: 60px;
+  overflow: hidden;
+  margin: 18px;
+}
+
+.drop .drop-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  background-color:rgba(1, 103, 103, 0.75);
+  color: #fff;
+  text-decoration: none;
+  padding: 30px;
+}
+.drop:hover .drop-content {
+  opacity: 1;
+}
+
+
+.blob {
+  width:200px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+.blob.blob-about {
+  background-image: url(/about/about1.png);
+}
+.blob.blob-about-2 {
+  background-image: url(/about/about2.png);
+}
+.blob.blob-service {
+  width: 386px;
+  height: 227px;
+  background-image: url(/services/services.png);
+}
+.blob.blob-animation-services {
+  background-image: url(/services/services-animation.png);
+}
+.blob.blob-design-services {
+  background-image: url(/services/services-design.png);
+}
+.blob.blob-editing-services {
+  background-image: url(/services/services-editing.png);
+}
+.blob.blob-merch-services {
+  background-image: url(/services/services-merch.png);
+}
+.blob.blob-music-services {
+  background-image: url(/services/services-music.png);
+}
+.blob.blob-post-services {
+  background-image: url(/services/services-post-production.png);
+}
+.blob.blob-production-services {
+  background-image: url(/services/services-production.png);
+}
+.blob.blob-sound-services {
+  background-image: url(/services/services-sound.png);
+}
+.blob.blob-storyboards-services {
+  background-image: url(/services/services-storyboards.png);
+}
+.blob.blob-writing-services {
+  background-image: url(/services/services-writing.png);
 }
