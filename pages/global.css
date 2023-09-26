@@ -86,14 +86,14 @@ h6 {
   height: 100vh;
 }
 
-.section .fp-overflow {
+/*.section .fp-overflow {
   background: rgb(48, 244, 98);
   background: radial-gradient(
     at 100% bottom,
     rgba(48, 244, 98, 1) 35%,
     rgba(9, 210, 98, 1) 65%
   );
-}
+}*/
 
 .section.section-home .fp-overflow {
   background: none;
@@ -105,6 +105,68 @@ h6 {
   align-items: center;
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+.jelly {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: rgb(48, 244, 98);
+}
+.jelly .jelly-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 208px;
+  background-image: url(/backgrounds/jelly-bg-top.png);
+  background-size: contain;
+  background-repeat: repeat-x;
+}
+.jelly .jelly-top-corner-left,
+.jelly .jelly-top-corner-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 800px;
+  background-image: url(/backgrounds/jelly-bg-corner.png);
+  z-index: 1;
+}
+.jelly .jelly-top-corner-left {
+  left: 0;
+}
+.jelly .jelly-top-corner-right {
+  right: 0;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+.jelly .jelly-side-left,
+.jelly .jelly-side-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 800px;
+  background-image: url(/backgrounds/jelly-bg-side.png);
+  z-index: 1;
+}
+.jelly .jelly-side-left {
+  left: 0;
+}
+.jelly .jelly-side-right {
+  right: 0;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
 }
 
 .drop {
@@ -123,7 +185,7 @@ h6 {
   bottom: 0;
   opacity: 0;
   transition: opacity 0.5s ease;
-  background-color:rgba(1, 103, 103, 0.75);
+  background-color: rgba(1, 103, 103, 0.75);
   color: #fff;
   text-decoration: none;
   padding: 30px;
@@ -132,9 +194,8 @@ h6 {
   opacity: 1;
 }
 
-
 .blob {
-  width:200px;
+  width: 200px;
   height: 200px;
   background-repeat: no-repeat;
   background-size: 100% auto;
