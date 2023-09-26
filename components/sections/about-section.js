@@ -33,8 +33,15 @@ const AboutSection = () => {
           </p>
         </Blob>
         <Blob idNum="about-2">
-          <p>Our specialty is creating top-notch short-form animated content for online platforms like Instagram, TikTok and YouTube.</p>
-          <p>Whether you've already got an established audience, or if you have an original idea and want to expand your fanbase, we'll help you create a consistent pipeline of amazing animated shorts!</p>
+          <p>
+            Our specialty is creating top-notch short-form animated content for
+            online platforms like Instagram, TikTok and YouTube.
+          </p>
+          <p>
+            Whether you&apos;ve already got an established audience, or if you
+            have an original idea and want to expand your fanbase, we&apos;ll
+            help you create a consistent pipeline of amazing animated shorts!
+          </p>
         </Blob>
       </div>
     </div>
