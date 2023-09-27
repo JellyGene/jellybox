@@ -23,33 +23,25 @@ const AboutSection = () => {
         </div>
         <div className="flx-col">
           <Blob title="A Cute Lil' Animation Studio" idNum="about">
-            <p>
-              A one-stop shop for all
+            <p class="large">
+              A <span className="hightlight">one-stop shop</span> for all
               <br />
               your animation needs!
             </p>
             <p>
-              We&apos;ve got over 20 years of experience, and we would
-              absolutely love to help you bring your ideas to life!
+              We&apos;ve got over <span className="highlight">20 years of experience</span>,<br />and we would absolutely <span className="highlight">love</span> to help you<br /><span className="highlight">bring your ideas to life!</span>
             </p>
           </Blob>
           <Blob idNum="about-2">
             <p>
-              Our specialty is creating top-notch short-form animated content
-              for online platforms like Instagram, TikTok and YouTube.
+              Our specialty is creating top-notch<br />short-form animated content
+              for online<br />platforms like <span className="highlight">Instagram</span>, <span className="highlight">TikTok</span> and <span className="highlight">YouTube</span>.
             </p>
             <p>
-              Whether you&apos;ve already got an established audience, or if you
-              have an original idea and want to expand your fanbase, we&apos;ll
-              help you create a consistent pipeline of amazing animated shorts!
+              Whether you&apos;ve already<br />got an <span className="highlight">established audience</span>, or if you have an<br />original idea and want to <span className="highlight">expand your fanbase</span>,<br />we&apos;ll help you create a consistent pipeline of<br /><span className="highlight">amazing animated shorts!</span>
             </p>
           </Blob>
         </div>
-      </div>
-      <div className="jelly">
-        <div className="jelly-top"></div>
-        <div className="jelly-top-corner-left"></div>
-        <div className="jelly-top-corner-right"></div>
       </div>
     </>
   );

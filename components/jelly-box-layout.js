@@ -4,7 +4,7 @@ import ReactFullpage from "@fullpage/react-fullpage";
 import VideoBg from "reactjs-videobg";
 
 import Menu from "./menu";
-import { starCartoon } from "./fonts/fonts";
+import { starCartoon, candyBean } from "./fonts/fonts";
 
 function JellyBoxLayout({ children }) {
   const router = useRouter();
@@ -23,7 +23,7 @@ function JellyBoxLayout({ children }) {
   console.log("font: ", starCartoon);
 
   return (
-    <article className={starCartoon.className}>
+    <article className={candyBean.className}>
       <Menu />
       <ReactFullpage
         navigation={true}

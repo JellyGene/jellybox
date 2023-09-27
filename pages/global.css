@@ -1,3 +1,15 @@
+* { 
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+   box-sizing: border-box; 
+}
+
+html,
+body {
+  line-height: 1.15;
+  font-size: 18px;
+}
+
 h1,
 h2,
 h3,
@@ -5,6 +17,11 @@ h4,
 h5,
 h6 {
   margin: 0;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 .flx {
@@ -142,58 +159,6 @@ h6 {
   background: rgb(48, 244, 98);
   background-color: #35fb58;
 }
-/*.jelly .jelly-top {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 208px;
-  background-image: url(/backgrounds/jelly-bg-top.png);
-  background-size: contain;
-  background-repeat: repeat-x;
-}
-.jelly .jelly-top-corner-left,
-.jelly .jelly-top-corner-right {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 800px;
-  background-image: url(/backgrounds/jelly-bg-corner.png);
-  z-index: 1;
-}
-.jelly .jelly-top-corner-left {
-  left: 0;
-}
-.jelly .jelly-top-corner-right {
-  right: 0;
-  -moz-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-  filter: FlipH;
-  -ms-filter: "FlipH";
-}
-.jelly .jelly-side-left,
-.jelly .jelly-side-right {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 800px;
-  background-image: url(/backgrounds/jelly-bg-side.png);
-  z-index: 1;
-}
-.jelly .jelly-side-left {
-  left: 0;
-}
-.jelly .jelly-side-right {
-  right: 0;
-  -moz-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-  filter: FlipH;
-  -ms-filter: "FlipH";
-}*/
 
 .drop {
   display: block;
@@ -225,11 +190,20 @@ h6 {
   height: 200px;
   background-repeat: no-repeat;
   background-size: 100% auto;
+  text-align: center;
+  padding: 30px;
+}
+.blob.blob-pres-bean {
+  width: 272px;
+  height: 160px;
+  background-image: url(/about/about-gene-bean.png);
+  padding: 105px 30px 30px;
 }
 .blob.blob-about {
   background-image: url(/about/about1.png);
   width: 486px;
   height: 340px;
+  padding: 175px 30px 30px;
 }
 .blob.blob-about-2 {
   background-image: url(/about/about2.png);
