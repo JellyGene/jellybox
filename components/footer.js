@@ -26,7 +26,7 @@ const Footer = ({ children }) => {
   };
 
   return (
-    <footer className="section fp-auto-height">
+    <footer className="section section-footer fp-auto-height">
       <div>
         <ul>
           <li></li>

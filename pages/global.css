@@ -17,11 +17,12 @@ h6 {
 .flx.spaced {
   justify-content: space-between;
 }
-.flx.flx-start {
-  justify-content: flex-start;
+.flx.center {
+  justify-content: center;
+  align-items: center;
 }
-.flx.flx-end {
-  justify-content: flex-end;
+.flx .flx-half {
+  width: calc(50% - 36px);
 }
 
 .highlight {
@@ -29,6 +30,17 @@ h6 {
 }
 .uppercase {
   text-transform: uppercase;
+}
+.text-hide {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 }
 
 .container {
@@ -52,7 +64,6 @@ h6 {
   width: 135px;
   background-repeat: no-repeat;
   background-size: auto 100%;
-  text-indent: -9999px;
 }
 .menu .menu-item.menu-item-about {
   background-image: url("/menu/menu-about.png");
@@ -86,17 +97,31 @@ h6 {
   height: 100vh;
 }
 
-/*.section .fp-overflow {
-  background: rgb(48, 244, 98);
-  background: radial-gradient(
-    at 100% bottom,
-    rgba(48, 244, 98, 1) 35%,
-    rgba(9, 210, 98, 1) 65%
-  );
-}*/
-
+.section .fp-overflow {
+    background-color: #35FB58;
+    box-shadow: 
+      24vw 0 5vw -12vw #00BD64 inset, /* left to right */
+      -24vw 0 5vw -12vw #00BD64 inset; /* right to left */
+}
+.section.section-about .fp-overflow {
+  box-shadow: 
+    24vw 0 5vw -12vw #00BD64 inset, /* left to right */
+    -24vw 0 5vw -12vw #00BD64 inset, /* right to left */
+    0 12vw 5vw -5vw #00BD64 inset; /* top to bottom */
+}
+.section.section-contact .fp-overflow {
+  box-shadow: 
+    24vw 0 5vw -12vw #00BD64 inset, /* left to right */
+    -24vw 0 5vw -12vw #00BD64 inset, /* right to left */
+    0 -12vw 5vw -5vw #00BD64 inset; /* top to bottom */
+}
 .section.section-home .fp-overflow {
-  background: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+.section.section-footer .fp-overflow {
+  background-color: #00BD64;
+  box-shadow: none;
 }
 
 .section .section-wrapper {
@@ -115,8 +140,9 @@ h6 {
   bottom: 0;
   z-index: -1;
   background: rgb(48, 244, 98);
+  background-color: #35fb58;
 }
-.jelly .jelly-top {
+/*.jelly .jelly-top {
   position: absolute;
   top: 0;
   left: 0;
@@ -167,7 +193,7 @@ h6 {
   transform: scaleX(-1);
   filter: FlipH;
   -ms-filter: "FlipH";
-}
+}*/
 
 .drop {
   display: block;
@@ -202,9 +228,13 @@ h6 {
 }
 .blob.blob-about {
   background-image: url(/about/about1.png);
+  width: 486px;
+  height: 340px;
 }
 .blob.blob-about-2 {
   background-image: url(/about/about2.png);
+  width: 494px;
+  height: 264px;
 }
 .blob.blob-service {
   width: 386px;

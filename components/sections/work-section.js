@@ -17,6 +17,7 @@ const WorkSection = () => {
           title="Plant Panic"
           poster="/work/planet-panic-poster.png"
           link="https://youtu.be/M5c56viVSbs?si=5pw8DStTdd5p3u1u"
+          className="flx-half"
         >
           <p>
             A co-production with Nickelodeon Studios and Studio Yotta, written
@@ -31,6 +32,7 @@ const WorkSection = () => {
           title="Poison Pop"
           poster="/work/poisonpop-poster.png"
           link="https://youtu.be/M5c56viVSbs?si=5pw8DStTdd5p3u1u"
+          className="flx-half"
         >
           <p>
             A hybrid live-action/animated music video created for the Los
@@ -50,6 +52,7 @@ const WorkSection = () => {
           title="NOXP"
           poster="/work/noxp-poster.png"
           link="https://youtu.be/M5c56viVSbs?si=5pw8DStTdd5p3u1u"
+          className="flx-half"
         >
           <p>
             A series of comedic shorts depicting the lives of a group of RPG
@@ -66,6 +69,7 @@ const WorkSection = () => {
           title="How To Survive"
           poster="/work/how-to-survive-poster.png"
           link="https://youtu.be/M5c56viVSbs?si=5pw8DStTdd5p3u1u"
+          className="flx-half"
         >
           <p>
             &quote;How To Survive The Greatest Emergency In the History Of The
