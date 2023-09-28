@@ -10,17 +10,10 @@ function JellyBoxLayout({ children }) {
   const router = useRouter();
 
   useEffect(() => {
-    console.log("load: ", router.pathname);
-    window.routerTest = router;
-  }, [router]);
-
-  useEffect(() => {
     if (window.fullpage_api) {
       window.fullpage_api.setAllowScrolling(true);
     }
   }, []);
-
-  console.log("font: ", starCartoon);
 
   return (
     <article className={candyBean.className}>
@@ -33,6 +26,8 @@ function JellyBoxLayout({ children }) {
           console.log("Render Section");
           const destinationIndex = destination.index;
           const pages = ["/", "/about", "/services", "/work", "/contact"];
+
+          console.log(destinationIndex)
 
           if (
             router.pathname !== pages[destinationIndex] &&
@@ -47,6 +42,7 @@ function JellyBoxLayout({ children }) {
             });
             window.fullpage_api.silentMoveTo(incomingSection + 1, 0);
           } else if (router.pathname !== pages[destinationIndex]) {
+            console.log('change')
             window.history.pushState(null, null, pages[destinationIndex]);
           }
         }}

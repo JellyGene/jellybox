@@ -210,6 +210,12 @@ p {
   width: 494px;
   height: 264px;
 }
+.blob.blob-work {
+  background-image: url(/work/work.png);
+  width: 386px;
+  height: 245px;
+  padding: 120px 30px 30px;
+}
 .blob.blob-service {
   width: 386px;
   height: 227px;

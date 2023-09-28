@@ -23,7 +23,7 @@ const AboutSection = () => {
         </div>
         <div className="flx-col">
           <Blob title="A Cute Lil' Animation Studio" idNum="about">
-            <p class="large">
+            <p className="large">
               A <span className="hightlight">one-stop shop</span> for all
               <br />
               your animation needs!

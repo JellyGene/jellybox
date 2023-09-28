@@ -5,7 +5,7 @@ import Drop from "../content/drop";
 
 const WorkSection = () => {
   return (
-    <div className="flx column container">
+    <div className="flx column container center">
       <Blob title="Work" idNum="work">
         We love working with a variety of{" "}
         <span className="highlight">production styles</span> and{" "}
