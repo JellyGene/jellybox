@@ -445,6 +445,16 @@ p {
   .container.wide {
     max-width: 600px;
   }
+
+  .menu .title img {
+    width: 100px;
+    height: 100px;
+  }
+  .menu .menu-item {
+    width: 75px;
+    height: 25px;
+  }
+
   .drop { margin: 12px; }
   .drop-title h3 {
     font-size: 1em;
