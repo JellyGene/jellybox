@@ -21,28 +21,51 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        name="name"
-        placeholder="Name"
-        value={formData.name}
-        onChange={handleChange}
-      />
-      <input
-        type="email"
-        name="email"
-        placeholder="Email"
-        value={formData.email}
-        onChange={handleChange}
-      />
-      <textarea
-        name="message"
-        placeholder="Message"
-        value={formData.message}
-        onChange={handleChange}
-      />
-      <button type="submit">Submit</button>
+    <form className="contact-form flx column center" onSubmit={handleSubmit}>
+      <div className="contact-form-input">
+        <label className="label-name" htmlFor="name">
+          <span className="text-hide">Name</span>
+        </label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Name"
+          className="contact-form-name"
+          value={formData.name}
+          onChange={handleChange}
+        />
+      </div>
+      <div className="contact-form-input">
+        <label className="label-email" htmlFor="email">
+          <span className="text-hide">Email</span>
+        </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Email"
+          className="contact-form-email"
+          value={formData.email}
+          onChange={handleChange}
+        />
+      </div>
+      <div className="contact-form-input">
+        <label className="label-message" htmlFor="message">
+          <span className="text-hide">Message</span>
+        </label>
+        <textarea
+          name="message"
+          id="message"
+          placeholder="Message"
+          className="contact-form-message"
+          value={formData.message}
+          onChange={handleChange}
+        />
+      </div>
+      <button type="submit" className="contact-form-button">
+        <span className="text-hide">Submit</span>
+      </button>
     </form>
   );
 };

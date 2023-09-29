@@ -45,6 +45,15 @@ p {
 .highlight {
   color: #016767;
 }
+.large {
+  font-size: 22px;
+}
+.extra-large {
+  font-size: 30px;
+}
+.small {
+  font-size: 14px;
+}
 .uppercase {
   text-transform: uppercase;
 }
@@ -62,7 +71,11 @@ p {
 
 .container {
   width: 1033px;
-  max-width: 98%;
+  padding: 0 20px;
+  max-width: 100%;
+}
+.container.wide {
+  width: 1500px;
 }
 
 .menu {
@@ -176,7 +189,7 @@ p {
   bottom: 0;
   opacity: 0;
   transition: opacity 0.5s ease;
-  background-color: rgba(1, 103, 103, 0.75);
+  background-color: rgba(6, 57, 49, 0.8);
   color: #fff;
   text-decoration: none;
   padding: 30px;
@@ -184,6 +197,17 @@ p {
 .drop:hover .drop-content {
   opacity: 1;
 }
+.drop-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.drop-title h3 {
+  font-size: 2.55em;
+  letter-spacing: 3px;
+  font-weight: lighter;
+}
+
 
 .blob {
   width: 200px;
@@ -201,7 +225,7 @@ p {
 }
 .blob.blob-about {
   background-image: url(/about/about1.png);
-  width: 486px;
+  width: 468px;
   height: 340px;
   padding: 175px 30px 30px;
 }
@@ -209,6 +233,7 @@ p {
   background-image: url(/about/about2.png);
   width: 494px;
   height: 264px;
+  margin: 20px 0 0 75px;
 }
 .blob.blob-work {
   background-image: url(/work/work.png);
@@ -217,37 +242,181 @@ p {
   padding: 120px 30px 30px;
 }
 .blob.blob-service {
+  background-image: url(/services/services.png);
   width: 386px;
   height: 227px;
-  background-image: url(/services/services.png);
+  padding: 90px 30px 30px;
 }
 .blob.blob-animation-services {
   background-image: url(/services/services-animation.png);
+  width: 280px;
+  height: 240px;
+  padding: 170px 30px 30px;
 }
 .blob.blob-design-services {
   background-image: url(/services/services-design.png);
+  width: 134px;
+  height: 140px;
+  padding: 103px 30px 12px;
 }
 .blob.blob-editing-services {
   background-image: url(/services/services-editing.png);
+  width: 134px;
+  height: 99px;
+  padding: 60px 30px 10px;
 }
 .blob.blob-merch-services {
   background-image: url(/services/services-merch.png);
+  width: 258px;
+  height: 255px;
+  padding: 190px 30px 30px;
 }
 .blob.blob-music-services {
   background-image: url(/services/services-music.png);
+  width: 130px;
+  height: 115px;
+  padding: 75px 30px 10px;
 }
 .blob.blob-post-services {
   background-image: url(/services/services-post-production.png);
+  width: 148px;
+  height: 128px;
+  padding: 80px 30px 10px;
+  line-height: 0.85;
 }
 .blob.blob-production-services {
   background-image: url(/services/services-production.png);
+  width: 294px;
+  height: 242px;
+  padding: 170px 30px 30px;
 }
 .blob.blob-sound-services {
   background-image: url(/services/services-sound.png);
+  width: 148px;
+  height: 114px;
+  padding: 73px 30px 10px;
 }
 .blob.blob-storyboards-services {
   background-image: url(/services/services-storyboards.png);
+  width: 154px;
+  height: 133px;
+  padding: 95px 30px 10px;
 }
 .blob.blob-writing-services {
   background-image: url(/services/services-writing.png);
+  width: 254px;
+  height: 247px;
+  padding: 175px 30px 30px;
+}
+.blob.services {
+  margin: 8px;
+}
+.blob.services.blob-editing-services {
+  margin: 8px 8px 8px 40px;
+}
+.blob.services.blob-sound-services {
+  margin: 8px 8px 8px 50px;
+}
+
+.contact-title {
+  background-image: url(/contact/contact-us.png);
+  width: 375px;
+  height: 108px;
+  background-repeat: no-repeat;
+  margin-bottom: 45px;
+}
+.contact-form-input {
+  position: relative;
+}
+.contact-form input,
+.contact-form textarea {
+  display: block;
+  background-color: white;
+  width: 830px;
+  border: solid 2px #FFF;
+  margin-bottom: 45px;
+  border-radius: 60px;
+  padding: 30px;
+  font-size: 18px;
+  transition: all 300ms ease;
+  outline: solid 0 #fff;
+}
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form input:focus-within,
+.contact-form textarea:focus-within,
+.contact-form input:focus-visible,
+.contact-form textarea:focus-visible {
+  border: solid 2px #35FB58;
+  outline: solid 2px white;
+}
+
+.contact-form input {
+  height: 110px;
+}
+.contact-form textarea {
+  height: 200px;
+}
+.contact-form .contact-form-button {
+  background-color: transparent;
+  background-image: url(/contact/send.png);
+  border: 0;
+  width: 292px;
+  height: 118px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.label-name, 
+.label-email, 
+.label-message {
+  display: block;
+  position: absolute;
+  left: 30px;
+}
+.label-name {
+  width: 147px;
+  height: 82px;
+  background-image: url(/contact/name.png);
+  top: -41px;
+}
+.label-email {
+  width: 172px;
+  height: 66px;
+  background-image: url(/contact/email.png);
+  top: -33px;
+}
+.label-message {
+  width: 228px;
+  height: 63px;
+  background-image: url(/contact/message.png);
+  top: -31px;
+}
+
+
+
+@media (max-width: 1205px) {
+  .flx.flx-m-row {
+    flex-direction: row;
+  }
+  .container.wide {
+    width: 875px;
+  }
+  .m-100 {
+    width: 100%;
+  }
+  .m-or0 { order: 0; }
+  .m-or1 { order: 1; }
+  .m-or2 { order: 2; }
+  .m-or3 { order: 3; }
+
+  .blob.blob-merch-services {
+    width: 125px;
+    height: 124px;
+    padding: 87px 30px 30px;
+  }
+  .blob.blob-merch-services .extra-large { font-size: 14px; }
+
+  .drop-title h3 {
+    font-size: 2em;
+  }
 }

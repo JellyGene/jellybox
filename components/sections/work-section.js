@@ -14,7 +14,7 @@ const WorkSection = () => {
       </Blob>
       <div className="flx">
         <Drop
-          title="Plant Panic"
+          title="Planet Panic"
           poster="/work/planet-panic-poster.png"
           link="https://youtu.be/M5c56viVSbs?si=5pw8DStTdd5p3u1u"
           className="flx-half"
@@ -72,8 +72,8 @@ const WorkSection = () => {
           className="flx-half"
         >
           <p>
-            &quote;How To Survive The Greatest Emergency In the History Of The
-            Planet&quote; was a commissioned project by Michael Rianda, director
+            &quot;How To Survive The Greatest Emergency In the History Of The
+            Planet&quot; was a commissioned project by Michael Rianda, director
             of Mitchells Vs. The Machines, as a promotional video to get people
             to vote during the historic 2020 election. Produced against a tight
             deadline leading up to election day, the entire short was created in

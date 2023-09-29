@@ -4,10 +4,10 @@ import ContactForm from "../contact-form";
 
 const ContactSection = () => {
   return (
-    <>
-      <h1>Contact</h1>
+    <div className="flx column center">
+      <h1 className="contact-title"><span className="text-hide">Contact</span></h1>
       <ContactForm />
-    </>
+    </div>
   );
 };
 

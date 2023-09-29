@@ -6,8 +6,8 @@ import Blob from "../content/blob";
 const AboutSection = () => {
   return (
     <>
-      <div className="flx">
-        <div className="flx-col">
+      <div className="flx center">
+        <div className="flx-col flx column center flx-m-row">
           <Image
             src="/green-bean.png"
             width={400}
@@ -24,7 +24,7 @@ const AboutSection = () => {
         <div className="flx-col">
           <Blob title="A Cute Lil' Animation Studio" idNum="about">
             <p className="large">
-              A <span className="hightlight">one-stop shop</span> for all
+              A <span className="highlight">one-stop shop</span> for all
               <br />
               your animation needs!
             </p>

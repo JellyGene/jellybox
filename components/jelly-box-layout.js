@@ -23,26 +23,19 @@ function JellyBoxLayout({ children }) {
         licenseKey="gplv3-license"
         scrollingSpee={800}
         afterLoad={(origin, destination, direction, trigger) => {
-          console.log("Render Section");
           const destinationIndex = destination.index;
           const pages = ["/", "/about", "/services", "/work", "/contact"];
 
-          console.log(destinationIndex)
-
           if (
-            router.pathname !== pages[destinationIndex] &&
+            router.pathname !== "/" &&
             origin.index === destinationIndex
           ) {
             const incomingSection = pages.findIndex(
               (item) => item === router.pathname
             );
-            console.log("same page: ", {
-              incomingSection,
-              active: fullpage_api.getActiveSection(),
-            });
+
             window.fullpage_api.silentMoveTo(incomingSection + 1, 0);
-          } else if (router.pathname !== pages[destinationIndex]) {
-            console.log('change')
+          } else if (origin.index !== pages[destinationIndex]) {
             window.history.pushState(null, null, pages[destinationIndex]);
           }
         }}
