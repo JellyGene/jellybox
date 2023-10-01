@@ -84,6 +84,9 @@ p {
   width: 100%;
   z-index: 4;
 }
+.menu .flx {
+  flex-wrap: nowrap;
+}
 .menu .menu-item {
   display: block;
   height: 45px;
@@ -126,20 +129,20 @@ p {
 .section .fp-overflow {
     background-color: #35FB58;
     box-shadow: 
-      24vw 0 5vw -12vw #00BD64 inset, /* left to right */
-      -24vw 0 5vw -12vw #00BD64 inset; /* right to left */
+      24vw 0 5vw -12vw #00BD64 inset, 
+      -24vw 0 5vw -12vw #00BD64 inset;
 }
 .section.section-about .fp-overflow {
   box-shadow: 
-    24vw 0 5vw -12vw #00BD64 inset, /* left to right */
-    -24vw 0 5vw -12vw #00BD64 inset, /* right to left */
-    0 12vw 5vw -5vw #00BD64 inset; /* top to bottom */
+    24vw 0 5vw -12vw #00BD64 inset,
+    -24vw 0 5vw -12vw #00BD64 inset, 
+    0 12vw 5vw -5vw #00BD64 inset; 
 }
 .section.section-contact .fp-overflow {
   box-shadow: 
-    24vw 0 5vw -12vw #00BD64 inset, /* left to right */
-    -24vw 0 5vw -12vw #00BD64 inset, /* right to left */
-    0 -12vw 5vw -5vw #00BD64 inset; /* top to bottom */
+    24vw 0 5vw -12vw #00BD64 inset, 
+    -24vw 0 5vw -12vw #00BD64 inset,
+    0 -12vw 5vw -5vw #00BD64 inset;
 }
 .section.section-home .fp-overflow {
   background-color: transparent;
@@ -324,6 +327,7 @@ p {
   width: 375px;
   height: 108px;
   background-repeat: no-repeat;
+  background-size: 100% auto;
   margin-bottom: 45px;
 }
 .contact-form { width: 100%; }
@@ -336,7 +340,6 @@ p {
 .contact-form textarea {
   display: block;
   background-color: white;
-  max-width: 830px;
   width: 100%;
   border: solid 2px #FFF;
   margin-bottom: 45px;
@@ -639,6 +642,36 @@ p {
   .extra-large {
     font-size: 18px;
   }
+  .menu .menu-item {
+    width: 64px;
+    height: 21px;
+  }
+  .section .fp-overflow {
+    box-shadow: 
+      40vw 0 10vw -20vw #00BD64 inset, 
+      -40vw 0 10vw -20vw #00BD64 inset;
+  }
+  .section.section-about .fp-overflow {
+    box-shadow: 
+      40vw 0 10vw -20vw #00BD64 inset,
+      -40vw 0 10vw -20vw #00BD64 inset, 
+      0 20vw 10vw -10vw #00BD64 inset; 
+  }
+  .section.section-contact .fp-overflow {
+    box-shadow: 
+      40vw 0 10vw -20vw #00BD64 inset, 
+      -40vw 0 10vw -20vw #00BD64 inset,
+      0 -20vw 10vw -10vw #00BD64 inset;
+  }
+  .bean {
+    width: 175px;
+    height: 206px;
+  }
+  .blob.blob-pres-bean {
+    width: 145px;
+    height: 85px;
+    padding: 55px 5px 5px;
+  }
   .blob.blob-animation-services {
     width: 132px;
     height: 113px;
@@ -683,5 +716,44 @@ p {
     width: 86px;
     height: 73px;
     padding: 50px 2px 5px;
+  }
+
+  .contact-title {
+    width: 280px;
+    height: 80px;
+    margin-bottom: 20px;
+  }
+  .contact-form-input {
+    max-width: 320px;
+  }
+  .contact-form input {
+    height: 55px;
+  }
+  .contact-form input, .contact-form textarea {
+    padding: 10px 20px;
+    border-radius: 30px;
+    margin-bottom: 30px;
+  }
+  .label-name, .label-email, .label-message {
+    left: 20px;
+  }
+  .label-name {
+    width: 70.2px;
+    height: 39px;
+    top: -19.5px;
+  }
+  .label-email {
+    width: 81.6px;
+    height: 31.2px;
+    top: -15.6px;
+  }
+  .label-message {
+    width: 110.4px;
+    height: 30px;
+    top: -15px;
+  }
+  .contact-form .contact-form-button {
+    height: 55px;
+    width: 136px;
   }
 }
