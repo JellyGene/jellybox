@@ -13,8 +13,15 @@ const Menu = () => {
           <span className="text-hide">Services</span>
         </Link>
         <div className="title">
-          <h1 className="text-hide">JellyBox</h1>
-          <Image src="/logo-loop.png" width={200} height={200} alt="Jellybox" priority={true} />
+          <h1 className="text-hide">Jellybox</h1>
+          <Image 
+            src="/logo-loop.png" 
+            width={200} 
+            height={200} 
+            alt="Jellybox" 
+            priority
+            unoptimized
+          />
         </div>
         <Link className="menu-item menu-item-work" href="/work">
           <span className="text-hide">Work</span>

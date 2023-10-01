@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 
 import Footer from "../components/footer";
 import SectionWrapper from "../components/sections/section-wrapper";
@@ -11,20 +12,25 @@ import ContactSection from "../components/sections/contact-section";
 const About = () => {
   return (
     <>
+      <Head>
+        <title>
+          About Jellybox | Jellybox Studio | Just A Cute Lil Indie Animation Studio
+        </title>
+      </Head>
       <SectionWrapper className="section-home">
-        <HomeSection />
+        <HomeSection mainSection={false} />
       </SectionWrapper>
       <SectionWrapper className="section-about">
-        <AboutSection />
+        <AboutSection mainSection={true} />
       </SectionWrapper>
       <SectionWrapper className="section-services">
-        <ServicesSection />
+        <ServicesSection mainSection={false} />
       </SectionWrapper>
       <SectionWrapper className="section-work">
-        <WorkSection />
+        <WorkSection mainSection={false} />
       </SectionWrapper>
       <SectionWrapper className="section-contact">
-        <ContactSection />
+        <ContactSection mainSection={false} />
       </SectionWrapper>
       <Footer />
     </>

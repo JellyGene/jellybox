@@ -10,6 +10,7 @@ const AboutSection = () => {
         <div className="flx-col flx column center flx-m-row">
           <Image
             src="/green-bean.png"
+            className="bean"
             width={400}
             height={470}
             alt="President Bean"

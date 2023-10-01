@@ -169,6 +169,11 @@ p {
   background-color: #35fb58;
 }
 
+.bean {
+  width: 300px;
+  height: 353px;
+}
+
 .drop {
   display: block;
   position: relative;
@@ -325,6 +330,7 @@ p {
 .contact-form-input {
   position: relative;
   width: 100%;
+  max-width: 830px;
 }
 .contact-form input,
 .contact-form textarea {
@@ -358,10 +364,11 @@ p {
 }
 .contact-form .contact-form-button {
   background-color: transparent;
+  width: 210px;
+  height: 85px;
+  background-size: contain;
   background-image: url(/contact/send.png);
   border: 0;
-  width: 292px;
-  height: 118px;
   background-repeat: no-repeat;
   cursor: pointer;
 }
@@ -371,36 +378,34 @@ p {
   display: block;
   position: absolute;
   left: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .label-name {
-  width: 147px;
-  height: 82px;
+  width: 117px;
+  height: 65px;
   background-image: url(/contact/name.png);
-  top: -41px;
+  top: -32px;
 }
 .label-email {
-  width: 172px;
-  height: 66px;
+  width: 136px;
+  height: 52px;
   background-image: url(/contact/email.png);
-  top: -33px;
+  top: -26px;
 }
 .label-message {
-  width: 228px;
-  height: 63px;
+  width: 184px;
+  height: 50px;
   background-image: url(/contact/message.png);
-  top: -31px;
+  top: -25px;
 }
-
 
 
 @media (max-width: 1205px) {
-  .flx.flx-m-row {
-    flex-direction: row;
-  }
   .container.wide {
     max-width: 875px;
   }
-  .m-100 {
+  .med-100 {
     width: 100%;
   }
   .m-or0 { order: 0; }
@@ -430,6 +435,36 @@ p {
 }
 
 @media (max-width: 1000px) {
+  html,
+  body {
+    line-height: 1.15;
+    font-size: 14px;
+  }
+  .large {
+    font-size: 18px;
+  }
+  .bean {
+    width: 200px;
+    height: 235px;
+  }
+  .blob {
+    padding: 20px;
+  }
+  .blob.blob-pres-bean {
+    width: 180px;
+    height: 105px;
+    padding: 70px 10px 10px;
+  }
+  .blob.blob-about {
+    width: 368px;
+    height: 267px;
+    padding: 130px 10px 10px;
+  }
+  .blob.blob-about-2 {
+    width: 372px;
+    height: 199px;
+    margin: 5px 0 0;
+  }
   .drop-title h3 {
     font-size: 1.15em;
   }
@@ -439,6 +474,15 @@ p {
 }
 
 @media (max-width: 800px) {
+  .container {
+    max-width: 730px;
+  }
+  .flx.flx-m-row {
+    flex-direction: row;
+  }
+  .flx.flx-m.column {
+    flex-direction: column;
+  }
   .flx .flx-half {
     width: calc(50% - 24px);
   }

@@ -32,7 +32,7 @@ const Footer = ({ children }) => {
           <li></li>
         </ul>
         <div>
-          <small>&copy; JellyBox 2023</small>
+          <small>&copy; Jellybox 2023</small>
         </div>
       </div>
     </footer>
