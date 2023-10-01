@@ -5,8 +5,8 @@ import Blob from "../content/blob";
 const ServicesSection = () => {
   return (
     <>
-      <div className="flx container wide center">
-        <div className="m-100 flx center">
+      <div className="flx container service-container center">
+        <div className="med-100 flx center">
           <Blob title="Services" idNum="service" className="services">
             Thanks to our<br /><span className="highlight">unique production pipeline</span> and<br /><span className="highlight">broad range of world-class talent</span>,<br />we can provide <span className="highlight">all of these services</span><br /> for your
             project:

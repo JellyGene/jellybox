@@ -6,7 +6,7 @@ import Blob from "../content/blob";
 const AboutSection = () => {
   return (
     <>
-      <div className="flx center">
+      <div className="flx center container">
         <div className="flx-col flx column center flx-m-row">
           <Image
             src="/green-bean.png"

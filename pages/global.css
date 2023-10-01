@@ -74,7 +74,7 @@ p {
   max-width: 1033px;
   padding: 0 20px;
 }
-.container.wide {
+.container.service-container {
   max-width: 1475px;
 }
 
@@ -246,7 +246,7 @@ p {
   background-image: url(/services/services.png);
   width: 386px;
   height: 227px;
-  padding: 90px 30px 30px;
+  padding: 87px 30px 30px;
 }
 .blob.blob-animation-services {
   background-image: url(/services/services-animation.png);
@@ -402,7 +402,7 @@ p {
 
 
 @media (max-width: 1205px) {
-  .container.wide {
+  .container.service-container {
     max-width: 875px;
   }
   .med-100 {
@@ -425,7 +425,7 @@ p {
   .blob.blob-merch-services {
     width: 125px;
     height: 124px;
-    padding: 87px 30px 30px;
+    padding: 90px 30px 10px;
   }
   .blob.blob-merch-services .extra-large { font-size: 14px; }
 
@@ -437,16 +437,26 @@ p {
 @media (max-width: 1000px) {
   html,
   body {
-    line-height: 1.15;
     font-size: 14px;
   }
   .large {
     font-size: 18px;
   }
+  .extra-large {
+    font-size: 24px;
+  }
+  .container  {
+    max-width: 800px;
+  }
+  .container.service-container {
+    width: 755px;
+  }
+
   .bean {
     width: 200px;
     height: 235px;
   }
+
   .blob {
     padding: 20px;
   }
@@ -465,6 +475,70 @@ p {
     height: 199px;
     margin: 5px 0 0;
   }
+  .blob.blob-service {
+    width: 300px;
+    height: 176px;
+    padding: 68px 20px 20px;
+  }
+
+  .blob.blob-animation-services {
+    width: 220px;
+    height: 188px;
+    padding: 130px 20px 20px;
+  }
+  .blob.blob-writing-services {
+    width: 210px;
+    height: 204px;
+    padding: 143px 20px 20px;
+  }
+  .blob.blob-production-services {
+    width: 230px;
+    height: 189px;
+    padding: 133px 20px 20px;
+  }
+  .blob.blob-design-services {
+    width: 120px;
+    height: 125px;
+    padding: 93px 20px 10px;
+  }
+  .blob.blob-storyboards-services {
+    width: 130px;
+    height: 112px;
+    padding: 78px 20px 10px;
+  }
+  .blob.blob-music-services {
+    width: 115px;
+    height: 102px;
+    padding: 68px 20px 10px;
+  }
+  .blob.blob-sound-services {
+    width: 125px;
+    height: 96px;
+    padding: 60px 20px 10px;
+  }
+  .blob.blob-editing-services {
+    width: 118px;
+    height: 87px;
+    padding: 53px 20px 10px;
+  }
+  .blob.blob-post-services {
+    width: 125px;
+    height: 108px;
+    padding: 70px 20px 10px;
+  }
+
+  .blob.blob-work {
+    width: 300px;
+    height: 190px;
+    padding: 92px 20px 20px;
+  }
+
+  .drop {
+    border-radius: 30px;
+  }
+  .drop .drop-content {
+    padding: 20px;
+  }
   .drop-title h3 {
     font-size: 1.15em;
   }
@@ -474,6 +548,10 @@ p {
 }
 
 @media (max-width: 800px) {
+  .small {
+    font-size: 10px;
+    line-height: 1.25;
+  }
   .container {
     max-width: 730px;
   }
@@ -486,7 +564,7 @@ p {
   .flx .flx-half {
     width: calc(50% - 24px);
   }
-  .container.wide {
+  .container.service-container {
     max-width: 600px;
   }
 
@@ -502,10 +580,6 @@ p {
   .drop { margin: 12px; }
   .drop-title h3 {
     font-size: 1em;
-  }
-  .drop-body.small {
-    font-size: 10px;
-    line-height: 1.25;
   }
 
   .blob.blob-animation-services {
@@ -546,7 +620,7 @@ p {
   .blob.blob-merch-services {
     width: 100px;
     height: 99px;
-    padding: 68px 6px 6px;
+    padding: 71px 6px 6px;
   }
 
   .blob.services {
@@ -555,5 +629,59 @@ p {
   .blob.services.blob-editing-services,
   .blob.services.blob-sound-services {
     margin: 4px 4px 4px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+  }
+  .extra-large {
+    font-size: 18px;
+  }
+  .blob.blob-animation-services {
+    width: 132px;
+    height: 113px;
+    padding: 77px 10px 10px;
+  }
+  .blob.blob-writing-services {
+    width: 126px;
+    height: 122px;
+    padding: 86px 10px 10px;
+  }
+  .blob.blob-production-services {
+    width: 138px;
+    height: 113px;
+    padding: 80px 10px 10px;
+  }
+  .blob.blob-design-services {
+    width: 72px;
+    height: 75px;
+    padding: 53px 5px 5px;
+  }
+  .blob.blob-storyboards-services {
+    width: 78px;
+    height: 67px;
+    padding: 44px 5px 5px;
+  }
+  .blob.blob-music-services {
+    width: 69px;
+    height: 61px;
+    padding: 37px 5px 10px;
+  }
+  .blob.blob-sound-services {
+    width: 75px;
+    height: 58px;
+    padding: 33px 5px 10px;
+  }
+  .blob.blob-editing-services {
+    width: 71px;
+    height: 52px;
+    padding: 28px 5px 5px;
+  }
+  .blob.blob-post-services {
+    width: 86px;
+    height: 73px;
+    padding: 50px 2px 5px;
   }
 }

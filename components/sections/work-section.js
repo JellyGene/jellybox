@@ -7,10 +7,8 @@ const WorkSection = () => {
   return (
     <div className="flx column container center">
       <Blob title="Work" idNum="work">
-        We love working with a variety of{" "}
-        <span className="highlight">production styles</span> and{" "}
-        <span className="highlight">mediums</span>! Here is a showcase of our{" "}
-        <span className="highlight large">best work</span>.
+        We love working with a variety of<br />
+        <span className="highlight">production styles</span> and <span className="highlight">mediums</span>!<br />Here is a showcase of our<br /><span className="highlight large">best work</span>.
       </Blob>
       <div className="flx">
         <Drop
