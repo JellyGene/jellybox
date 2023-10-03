@@ -2,11 +2,12 @@
 import React from "react";
 import Image from "next/image";
 import Blob from "../content/blob";
+import Bubbles from "../bubbles";
 
 const AboutSection = () => {
   return (
     <>
-      <div className="flx center container">
+      <div className="flx center container above">
         <div className="flx-col flx column center flx-m-row">
           <Image
             src="/green-bean.png"
@@ -30,20 +31,40 @@ const AboutSection = () => {
               your animation needs!
             </p>
             <p>
-              We&apos;ve got over <span className="highlight">20 years of experience</span>,<br />and we would absolutely <span className="highlight">love</span> to help you<br /><span className="highlight">bring your ideas to life!</span>
+              We&apos;ve got over{" "}
+              <span className="highlight">20 years of experience</span>,<br />
+              and we would absolutely <span className="highlight">love</span> to
+              help you
+              <br />
+              <span className="highlight">bring your ideas to life!</span>
             </p>
           </Blob>
           <Blob idNum="about-2">
             <p>
-              Our specialty is creating top-notch<br />short-form animated content
-              for online<br />platforms like <span className="highlight">Instagram</span>, <span className="highlight">TikTok</span> and <span className="highlight">YouTube</span>.
+              Our specialty is creating top-notch
+              <br />
+              short-form animated content for online
+              <br />
+              platforms like <span className="highlight">Instagram</span>,{" "}
+              <span className="highlight">TikTok</span> and{" "}
+              <span className="highlight">YouTube</span>.
             </p>
             <p>
-              Whether you&apos;ve already<br />got an <span className="highlight">established audience</span>, or if you have an<br />original idea and want to <span className="highlight">expand your fanbase</span>,<br />we&apos;ll help you create a consistent pipeline of<br /><span className="highlight">amazing animated shorts!</span>
+              Whether you&apos;ve already
+              <br />
+              got an <span className="highlight">established audience</span>, or
+              if you have an
+              <br />
+              original idea and want to{" "}
+              <span className="highlight">expand your fanbase</span>,<br />
+              we&apos;ll help you create a consistent pipeline of
+              <br />
+              <span className="highlight">amazing animated shorts!</span>
             </p>
           </Blob>
         </div>
       </div>
+      <Bubbles total={25} />
     </>
   );
 };

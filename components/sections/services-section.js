@@ -1,15 +1,22 @@
 import React from "react";
-
+import Bubbles from "../bubbles";
 import Blob from "../content/blob";
 
 const ServicesSection = () => {
   return (
     <>
-      <div className="flx container service-container center">
+      <div className="flx container service-container center above">
         <div className="med-100 flx center">
           <Blob title="Services" idNum="service" className="services">
-            Thanks to our<br /><span className="highlight">unique production pipeline</span> and<br /><span className="highlight">broad range of world-class talent</span>,<br />we can provide <span className="highlight">all of these services</span><br /> for your
-            project:
+            Thanks to our
+            <br />
+            <span className="highlight">unique production pipeline</span> and
+            <br />
+            <span className="highlight">broad range of world-class talent</span>
+            ,<br />
+            we can provide{" "}
+            <span className="highlight">all of these services</span>
+            <br /> for your project:
           </Blob>
         </div>
         <Blob title="Animation" idNum="animation-services" className="services">
@@ -19,21 +26,33 @@ const ServicesSection = () => {
           <Blob title="Design" idNum="design-services" className="services">
             <span className="small">Design</span>
           </Blob>
-          <Blob title="Storyboards" idNum="storyboards-services" className="services">
+          <Blob
+            title="Storyboards"
+            idNum="storyboards-services"
+            className="services"
+          >
             <span className="small">Storyboards</span>
           </Blob>
         </div>
         <Blob title="Writing" idNum="writing-services" className="services">
           <span className="extra-large">Writing</span>
         </Blob>
-        <Blob title="Production" idNum="production-services" className="services m-or1">
+        <Blob
+          title="Production"
+          idNum="production-services"
+          className="services m-or1"
+        >
           <span className="extra-large">Production</span>
         </Blob>
         <div className="m-or0">
           <Blob title="Music" idNum="music-services" className="services">
             <span className="small">Music</span>
           </Blob>
-          <Blob title="Sound Design" idNum="sound-services" className="services">
+          <Blob
+            title="Sound Design"
+            idNum="sound-services"
+            className="services"
+          >
             <span className="small">Sound Design</span>
           </Blob>
         </div>
@@ -44,11 +63,16 @@ const ServicesSection = () => {
           <Blob title="Editing" idNum="editing-services" className="services">
             <span className="small">Editing</span>
           </Blob>
-          <Blob title="Post-Production" idNum="post-services" className="services">
+          <Blob
+            title="Post-Production"
+            idNum="post-services"
+            className="services"
+          >
             <span className="small">Post-Production</span>
           </Blob>
         </div>
       </div>
+      <Bubbles total={20} />
     </>
   );
 };
