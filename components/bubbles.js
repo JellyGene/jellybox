@@ -1,8 +1,11 @@
 import React, { useEffect } from "react";
 import { gsap, Sine } from "gsap";
+import { CSSPlugin } from "gsap/CSSPlugin";
 
-const Bubbles = ({ total, top, left, right, bottom }) => {
+const Bubbles = ({ total }) => {
   const bubbles = [...Array(total)].map((_, i) => `bubble-${i}`);
+
+  gsap.registerPlugin(Sine, CSSPlugin);
 
   useEffect(() => {
     const randomX = random(10, 20);
