@@ -330,6 +330,9 @@ p {
 .contact-form {
   width: 100%;
 }
+.contact-form.disabled {
+  opacity: 0.75;
+}
 .contact-form-input {
   position: relative;
   width: 100%;

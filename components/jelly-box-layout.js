@@ -17,7 +17,6 @@ function JellyBoxLayout({ children }) {
 
   return (
     <article className={candyBean.className}>
-      <Menu />
       <ReactFullpage
         navigation={true}
         licenseKey="gplv3-license"
