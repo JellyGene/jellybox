@@ -1,12 +1,21 @@
 // pages/about.js (About page)
 import React from "react";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+const JellyWaves = dynamic(() => import("../jelly-waves"), {
+  ssr: false,
+});
 import Blob from "../content/blob";
 import Bubbles from "../bubbles";
 
 const AboutSection = () => {
   return (
     <>
+      <div
+        style={{ position: "absolute", top: 0, transform: "rotate(180deg)" }}
+      >
+        <JellyWaves />
+      </div>
       <div className="flx center container above">
         <div className="flx-col flx column center flx-m-row">
           <Image
