@@ -20,7 +20,14 @@ const Drop = ({
         <div className="drop-body small">{children}</div>
       </a>
       <div className="drop-image">
-        <Image src={poster} width={698} height={468} alt={posterAlt ?? title} />
+        <Image
+          src={poster}
+          width={698}
+          height={468}
+          alt={posterAlt ?? title}
+          placeholder="blur"
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkyD9aDwADYAG11MKejAAAAABJRU5ErkJggg=="
+        />
       </div>
     </section>
   );
