@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
 
   const handleChange = (e) => {
@@ -14,14 +14,58 @@ const ContactForm = () => {
       [name]: value,
     });
   };
+  const [form, setForm] = useState("");
 
-  const handleSubmit = (e) => {
+  const isFormDisabled = () => {
+    if (form.state === "success" || form.state === "loading") return true;
+
+    return false;
+  }
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission logic here
+    
+    if (formData.name && formData.email && formData.message) {
+			setForm({ state: "loading" })
+			try {
+				const res = await fetch(`api/send-email`, {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify(formData),
+				})
+ 
+				const { error } = await res.json()
+ 
+				if (error) {
+					setForm({
+						state: "error",
+						message: error,
+					})
+					return
+				}
+ 
+				setForm({
+					state: "success",
+					message: "Your message was sent successfully.",
+				})
+				setFormData({
+					name: "",
+					email: "",
+					message: "",
+				})
+			} catch (error) {
+				setForm({
+					state: "error",
+					message: "Something went wrong",
+				})
+			}
+		}
   };
 
   return (
-    <form className="contact-form flx column center" onSubmit={handleSubmit}>
+    <form className={`contact-form flx column center ${isFormDisabled() ? 'disabled' : 'active'}`} onSubmit={handleSubmit}>
       <div className="contact-form-input">
         <label className="label-name" htmlFor="name">
           <span className="text-hide">Name</span>
@@ -34,6 +78,8 @@ const ContactForm = () => {
           className="contact-form-name"
           value={formData.name}
           onChange={handleChange}
+          disabled={isFormDisabled()}
+          required
         />
       </div>
       <div className="contact-form-input">
@@ -48,6 +94,8 @@ const ContactForm = () => {
           className="contact-form-email"
           value={formData.email}
           onChange={handleChange}
+          disabled={isFormDisabled()}
+          required
         />
       </div>
       <div className="contact-form-input">
@@ -61,11 +109,20 @@ const ContactForm = () => {
           className="contact-form-message"
           value={formData.message}
           onChange={handleChange}
+          disabled={isFormDisabled()}
+          required
         />
       </div>
-      <button type="submit" className="contact-form-button">
+      <button type="submit" className="contact-form-button" disabled={isFormDisabled()}>
         <span className="text-hide">Submit</span>
       </button>
+      {form.state === "loading" ? (
+					<div>Sending....</div>
+				) : form.state === "error" ? (
+					<div>{form.message}</div>
+				) : (
+					form.state === "success" && <div>Sent successfully</div>
+				)}
     </form>
   );
 };
