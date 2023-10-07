@@ -24,6 +24,10 @@ p {
   margin-bottom: 0.5em;
 }
 
+img {
+  transition: 300ms;
+}
+
 .flx {
   display: flex;
   flex-wrap: wrap;
@@ -42,8 +46,12 @@ p {
   align-items: flex-end;
   height: 100%;
 }
+.flx.remove-marg {
+  margin: 0 -2.5%;
+}
 .flx .flx-half {
-  width: calc(50% - 36px);
+  width: 45%;
+  margin: 2.5%;
 }
 
 .highlight {
@@ -180,7 +188,6 @@ p {
   position: relative;
   border-radius: 60px;
   overflow: hidden;
-  margin: 18px;
 }
 
 .drop .drop-content {
@@ -563,7 +570,7 @@ p {
     max-width: 800px;
   }
   .container.service-container {
-    max-width: 675px;
+    max-width: 560px;
   }
   .blob.blob-animation-services {
     width: 150px;
@@ -604,6 +611,16 @@ p {
     width: 75px;
     height: 74px;
     padding: 52px 6px 6px;
+  }
+  .blob.blob-editing-services {
+    width: 76px;
+    height: 56px;
+    padding: 30px 6px 6px;
+  }
+  .blob.blob-post-services {
+    width: 86px;
+    height: 74px;
+    padding: 50px 6px 6px;
   }
 
   .blob.services {
