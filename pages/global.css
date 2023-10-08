@@ -561,19 +561,49 @@ img {
 @media (max-width: 1000px), (max-width: 1400px) and (max-height: 800px) {
   html,
   body {
-    font-size: 14px;
+    font-size: 12px;
+  }
+  .small {
+    font-size: 10px;
+    line-height: 1.25;
   }
   .large {
-    font-size: 18px;
+    font-size: 16px;
   }
   .extra-large {
-    font-size: 24px;
+    font-size: 22px;
   }
   .container {
-    max-width: 800px;
+    max-width: 650px;
   }
   .container.service-container {
-    max-width: 560px;
+    max-width: 520px;
+  }
+  .blob {
+    padding: 10px;
+  }
+  .blob.blob-pres-bean {
+    width: 144px;
+    height: 84px;
+    padding: 55px 10px 10px;
+  }
+
+  .blob.blob-about {
+    width: 294px;
+    height: 214px;
+    padding: 100px 10px 10px;
+  }
+
+  .blob.blob-about-2 {
+    width: 298px;
+    height: 159px;
+    margin: 5px 0 0;
+  }
+
+  .blob.blob-service {
+    width: 240px;
+    height: 141px;
+    padding: 52px 10px 10px;
   }
   .blob.blob-animation-services {
     width: 150px;
@@ -588,27 +618,27 @@ img {
   .blob.blob-production-services {
     width: 165px;
     height: 136px;
-    padding: 92px 10px 10px;
+    padding: 95px 10px 10px;
   }
   .blob.blob-design-services {
     width: 75px;
     height: 78px;
-    padding: 55px 10px 10px;
+    padding: 57px 10px 10px;
   }
   .blob.blob-storyboards-services {
     width: 82px;
     height: 71px;
-    padding: 47px 6px 6px;
+    padding: 49px 6px 6px;
   }
   .blob.blob-music-services {
     width: 75px;
     height: 66px;
-    padding: 55px 10px 6px;
+    padding: 44px 10px 6px;
   }
   .blob.blob-sound-services {
     width: 86px;
     height: 66px;
-    padding: 38px 1px 6px;
+    padding: 42px 5px 6px;
   }
   .blob.blob-merch-services {
     width: 75px;
@@ -618,16 +648,22 @@ img {
   .blob.blob-editing-services {
     width: 76px;
     height: 56px;
-    padding: 30px 6px 6px;
+    padding: 33px 6px 6px;
   }
   .blob.blob-post-services {
     width: 86px;
     height: 74px;
-    padding: 50px 6px 6px;
+    padding: 48px 6px 6px;
   }
 
   .blob.services {
     margin: 4px;
+  }
+  .blob.services.blob-sound-services {
+    margin: 4px 4px 4px 30px;
+  }
+  .blob.services.blob-editing-services {
+    margin: 4px 4px 4px 25px;
   }
 
   .drop {
@@ -689,10 +725,6 @@ img {
 }
 
 @media (max-width: 800px) {
-  .small {
-    font-size: 10px;
-    line-height: 1.25;
-  }
   .container {
     max-width: 730px;
   }
