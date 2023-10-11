@@ -1,9 +1,6 @@
 import React from "react";
-import dynamic from "next/dynamic";
 import Menu from "../menu";
-const JellyWaves = dynamic(() => import("../jelly-waves"), {
-  ssr: false,
-});
+import JellyWaves from "../jelly-waves";
 
 const HomeSection = () => {
   return (
@@ -11,7 +8,6 @@ const HomeSection = () => {
       <Menu />
       <JellyWaves />
     </>
-    
   );
 };
 

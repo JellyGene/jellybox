@@ -1,18 +1,20 @@
 // pages/about.js (About page)
 import React from "react";
 import Image from "next/image";
-import dynamic from "next/dynamic";
-const JellyWaves = dynamic(() => import("../jelly-waves"), {
-  ssr: false,
-});
+import JellyWaves from "../jelly-waves";
 import Blob from "../content/blob";
-import Bubbles from "../bubbles";
+import BubbleCanvas from "../bubbles-canvas";
 
 const AboutSection = () => {
   return (
     <>
       <div
-        style={{ position: "absolute", top: 0, transform: "rotate(180deg)" }}
+        style={{
+          position: "absolute",
+          top: 0,
+          transform: "rotate(180deg)",
+          zIndex: 4,
+        }}
       >
         <JellyWaves />
       </div>
@@ -73,7 +75,7 @@ const AboutSection = () => {
           </Blob>
         </div>
       </div>
-      <Bubbles total={25} />
+      <BubbleCanvas />
     </>
   );
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import Bubbles from "../bubbles";
+import BubbleCanvas from "../bubbles-canvas";
 import Blob from "../content/blob";
 
 const ServicesSection = () => {
@@ -72,7 +72,7 @@ const ServicesSection = () => {
           </Blob>
         </div>
       </div>
-      <Bubbles total={20} />
+      <BubbleCanvas />
     </>
   );
 };

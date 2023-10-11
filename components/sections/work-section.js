@@ -1,5 +1,5 @@
 import React from "react";
-import Bubbles from "../bubbles";
+import BubbleCanvas from "../bubbles-canvas";
 import Blob from "../content/blob";
 import Drop from "../content/drop";
 
@@ -89,7 +89,7 @@ const WorkSection = () => {
           </Drop>
         </div>
       </div>
-      <Bubbles total={30} />
+      <BubbleCanvas />
     </>
   );
 };

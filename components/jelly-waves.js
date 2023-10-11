@@ -1,10 +1,7 @@
 import React from "react";
-import { nanoid } from "nanoid";
 import Wave from "react-wavify";
 
 const JellyWaves = () => {
-  const waveId = nanoid(5);
-
   return (
     <div className="flx align-bottom">
       <Wave

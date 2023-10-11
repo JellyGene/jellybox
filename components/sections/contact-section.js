@@ -1,5 +1,5 @@
 import React from "react";
-import Bubbles from "../bubbles";
+import BubbleCanvas from "../bubbles-canvas";
 import ContactForm from "../contact-form";
 
 const ContactSection = () => {
@@ -11,7 +11,7 @@ const ContactSection = () => {
         </h1>
         <ContactForm />
       </div>
-      <Bubbles total={25} />
+      <BubbleCanvas />
     </>
   );
 };
