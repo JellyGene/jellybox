@@ -7,9 +7,9 @@ const JellyWaves = () => {
       <Wave
         fill="rgb(121, 255, 145)"
         paused={false}
-        style={{ display: "flex", width: "100vw", height: "65px" }}
+        style={{ display: "flex", width: "100vw", height: "50px" }}
         options={{
-          height: 20,
+          height: 10,
           amplitude: 15,
           speed: 0.15,
           points: 6,

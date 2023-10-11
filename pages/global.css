@@ -171,6 +171,7 @@ img {
   justify-content: center;
   align-items: center;
   margin: 0 0 5px;
+  padding: 0;
 }
 .section-footer ul li {
   margin: 0 5px;

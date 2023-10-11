@@ -33,8 +33,8 @@ const SocialList = () => {
             <a title={`link to ${object.social}`} href={object.link}>
               <Image
                 alt={object.social}
-                width={40}
-                height={40}
+                width={65}
+                height={65}
                 src={`/socials/${object.social}.png`}
               />
             </a>
@@ -51,7 +51,7 @@ const Footer = ({ children }) => {
       <div className="flx column center">
         <SocialList />
         <div>
-          <small>&copy; Jellybox 2023</small>
+          <span className="uppercase">&copy; Jellybox 2023</span>
         </div>
       </div>
     </footer>
