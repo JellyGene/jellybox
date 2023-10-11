@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import ReactFullpage from "@fullpage/react-fullpage";
 import VideoBg from "reactjs-videobg";
 
+import BackgroundVideo from "./background-video";
 import { starCartoon, candyBean } from "./fonts/fonts";
 
 function JellyBoxLayout({ children }) {
@@ -38,10 +39,11 @@ function JellyBoxLayout({ children }) {
           return <ReactFullpage.Wrapper>{children}</ReactFullpage.Wrapper>;
         }}
       />
-      <VideoBg wrapperClass="reel-wrapper" videoClass="reel" playsInline>
+      {/*<VideoBg wrapperClass="reel-wrapper" videoClass="reel" playsInline>
         <VideoBg.Source src="/JellyboxReel2023.webm" type="video/webm" />
         <VideoBg.Source src="/JellyboxReel2023.mp4" type="video/mp4" />
-      </VideoBg>
+      </VideoBg>*/}
+      <BackgroundVideo video="/JellyboxReel2023.mp4" />
     </article>
   );
 }
