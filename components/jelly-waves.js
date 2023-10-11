@@ -10,7 +10,7 @@ const JellyWaves = () => {
         style={{ display: "flex", width: "100vw", height: "65px" }}
         options={{
           height: 20,
-          amplitude: 35,
+          amplitude: 15,
           speed: 0.15,
           points: 6,
         }}
