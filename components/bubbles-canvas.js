@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { createCanvas, loadImage } from "canvas";
 
 const BubbleCanvas = () => {
-  const canvasRef = useRef(null);
+  const canvasRef = useRef(null); //test
   const bubbles = [];
   const bubbleImage = createCanvas(40, 40);
   const bubbleImageContext = bubbleImage.getContext("2d");
