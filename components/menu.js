@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import styles from "./menu.module.css";
 
 const Menu = () => {
   const slideToItem = (e, section) => {
@@ -8,23 +9,23 @@ const Menu = () => {
     fullpage_api.moveTo(section, 0);
   };
   return (
-    <nav className="menu">
+    <nav className={styles.menu}>
       <div className="flx center">
         <Link
           href="/about"
-          className="menu-item menu-item-about"
+          className={`${styles["menu-item"]} ${styles["menu-item-about"]}`}
           onClick={(e) => slideToItem(e, 2)}
         >
           <span className="text-hide">About</span>
         </Link>
         <Link
-          className="menu-item menu-item-services"
+          className={`${styles["menu-item"]} ${styles["menu-item-services"]}`}
           href="/services"
           onClick={(e) => slideToItem(e, 3)}
         >
           <span className="text-hide">Services</span>
         </Link>
-        <div className="title">
+        <div className={styles.title}>
           <h1 className="text-hide">Jellybox</h1>
           <Image
             src="/logo-loop.png"
@@ -36,14 +37,14 @@ const Menu = () => {
           />
         </div>
         <Link
-          className="menu-item menu-item-work"
+          className={`${styles["menu-item"]} ${styles["menu-item-work"]}`}
           href="/work"
           onClick={(e) => slideToItem(e, 4)}
         >
           <span className="text-hide">Work</span>
         </Link>
         <Link
-          className="menu-item menu-item-contact"
+          className={`${styles["menu-item"]} ${styles["menu-item-contact"]}`}
           href="/contact"
           onClick={(e) => slideToItem(e, 5)}
         >

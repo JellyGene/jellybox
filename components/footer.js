@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 
+import styles from "./sections/section.module.css";
+
 const socialGroup = [
   {
     social: "twitter",
@@ -47,7 +49,9 @@ const SocialList = () => {
 
 const Footer = ({ children }) => {
   return (
-    <footer className="section section-footer fp-auto-height">
+    <footer
+      className={`section ${styles.section} ${styles["section-footer"]} fp-auto-height`}
+    >
       <div className="flx column center">
         <SocialList />
         <div>

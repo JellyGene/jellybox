@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { starCartoon } from "../fonts/fonts";
+import styles from "./drop.module.css";
 
 const Drop = ({
   children,
@@ -12,14 +13,16 @@ const Drop = ({
   link,
 }) => {
   return (
-    <section className={`drop drop-${idNum ?? "normal"} ${className}`}>
-      <a className="drop-content" href={link}>
-        <header className="drop-title">
+    <section
+      className={`${styles.drop} drop-${idNum ?? "normal"} ${className}`}
+    >
+      <a className={styles["drop-content"]} href={link}>
+        <header className={styles["drop-title"]}>
           <h3 className={`uppercase ${starCartoon.className}`}>{title}</h3>
         </header>
         <div className="drop-body small">{children}</div>
       </a>
-      <div className="drop-image">
+      <div className={styles["drop-image"]}>
         <Image
           src={poster}
           width={698}

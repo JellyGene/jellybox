@@ -1,0 +1,66 @@
+.drop {
+  display: block;
+  position: relative;
+  border-radius: 60px;
+  overflow: hidden;
+}
+
+.drop .drop-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  background-color: rgba(6, 57, 49, 0.8);
+  color: #fff;
+  text-decoration: none;
+  padding: 30px;
+}
+.drop:hover .drop-content {
+  opacity: 1;
+}
+.drop-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.drop-title h3 {
+  font-size: 2.55em;
+  letter-spacing: 3px;
+  font-weight: lighter;
+}
+
+@media (max-width: 1400px) {
+  .drop {
+    border-radius: 30px;
+  }
+  .drop .drop-content {
+    padding: 20px;
+  }
+  .drop-title h3 {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 1000px), (max-width: 1400px) and (max-height: 800px) {
+  .drop {
+    border-radius: 25px;
+  }
+  .drop .drop-content {
+    padding: 10px;
+  }
+  .drop-title h3 {
+    font-size: 1.15em;
+  }
+}
+
+@media (max-width: 800px) {
+  .drop {
+    margin: 12px;
+  }
+  .drop-title h3 {
+    font-size: 1em;
+  }
+}

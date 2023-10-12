@@ -1,8 +1,9 @@
-import React from 'react';
+import React from "react";
+import styles from "./blob.module.css";
 
 const Title = ({ title }) => {
   if (title) {
-    return (<h3 className="text-hide">{title}</h3>);
+    return <h3 className="text-hide">{title}</h3>;
   }
 
   return null;
@@ -10,9 +11,15 @@ const Title = ({ title }) => {
 
 const Blob = ({ children, className, idNum, title }) => {
   return (
-    <div className={ `blob blob-${ idNum ?? 'normal' }${className ? " " + className : ""}` }>
+    <div
+      className={`
+        ${styles.blob}
+        ${styles[`blob-${idNum ?? "normal"}`]}
+        ${className ? " " + className : ""}
+      `}
+    >
       <Title />
-      { children }
+      {children}
     </div>
   );
 };
