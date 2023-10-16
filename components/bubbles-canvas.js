@@ -2,50 +2,70 @@ import React, { useEffect, useRef } from "react";
 import { createCanvas, loadImage } from "canvas";
 
 const BubbleCanvas = () => {
-  const canvasRef = useRef(null); //test
+  const canvasRef = useRef(null);
   const bubbles = [];
   const bubbleImage = createCanvas(40, 40);
   const bubbleImageContext = bubbleImage.getContext("2d");
+  let animationId;
 
-  const loadImageData = async () => {
-    const img = await loadImage("/backgrounds/bubble.png");
-    bubbleImageContext.drawImage(img, 0, 0, 40, 40);
-    canvasInit();
-  };
-
-  useEffect(() => {
-    loadImageData();
-  }, []);
-
-  const canvasInit = () => {
+  const canvasDraw = () => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
     const canvasWidth = window.innerWidth;
     const canvasHeight = window.innerHeight;
-    canvas.width = canvasWidth;
-    canvas.height = canvasHeight;
 
-    const canvasAddBubbles = () => {
-      const bubble = new Bubble(ctx, canvasWidth, canvasHeight, bubbleImage);
-      bubble.draw();
-      bubbles.push(bubble);
-    };
-
-    const canvasDraw = () => {
-      ctx.clearRect(0, 0, canvasWidth, canvasHeight);
-      bubbles.forEach((bubble) => bubble.update());
-      window.requestAnimationFrame(canvasDraw);
-    };
-
-    setInterval(() => canvasAddBubbles(), 500);
-    canvasDraw();
+    ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+    bubbles.forEach((bubble) => bubble.update());
+    animationId = requestAnimationFrame(canvasDraw);
   };
 
+  useEffect(() => {
+    const loadImageData = async () => {
+      const img = await loadImage("/backgrounds/bubble.png");
+      bubbleImageContext.drawImage(img, 0, 0, 40, 40);
+      canvasInit();
+    };
+
+    const canvasInit = () => {
+      const canvas = canvasRef.current;
+      const canvasWidth = window.innerWidth;
+      const canvasHeight = window.innerHeight;
+      canvas.width = canvasWidth;
+      canvas.height = canvasHeight;
+
+      const canvasAddBubbles = () => {
+        if (!document.hidden) {
+          const bubble = new Bubble(canvasWidth, canvasHeight, bubbleImage);
+          bubble.draw();
+          bubbles.push(bubble);
+        }
+      };
+
+      setInterval(() => canvasAddBubbles(), 500);
+      animationId = requestAnimationFrame(canvasDraw);
+    };
+
+    loadImageData();
+
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        cancelAnimationFrame(animationId); // Pause animation
+      } else {
+        animationId = requestAnimationFrame(canvasDraw); // Resume animation
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
+  }, []);
+
   class Bubble {
-    constructor(ctx, canvasWidth, canvasHeight, image) {
+    constructor(canvasWidth, canvasHeight, image) {
       this.canvasHeight = canvasHeight;
       this.canvasWidth = canvasWidth;
-      this.ctx = ctx;
       this.radius = this.randomVal(5, 20);
       this.x = this.randomVal(0, canvasWidth);
       this.y = canvasHeight + this.radius;
@@ -56,7 +76,10 @@ const BubbleCanvas = () => {
     }
 
     draw() {
-      this.ctx.drawImage(
+      const canvas = canvasRef.current;
+      const ctx = canvas.getContext("2d");
+
+      ctx.drawImage(
         this.image,
         this.x - this.radius,
         this.y - this.radius,
