@@ -172,6 +172,11 @@ img {
     width: 19.5375vw;
     height: 22.9875vw;
   }
+  .contact-title {
+    width: 24.41vw;
+    height: 7.04vw;
+    margin-bottom: 3.5vw;
+  }
   
 }
 
@@ -195,6 +200,11 @@ img {
   }
   .flx.m-row {
     flex-direction: row;
+  }
+  .contact-title {
+    width: 29.29vw;
+    height: 8.45vw;
+    margin-bottom: 5vw;
   }
   
 }
@@ -259,6 +269,12 @@ img {
     width: 39.68vw;
     height: 46.6vw;
   } 
+  .contact-title {
+    width: 39.61vw; 
+    height: 11.42vw;
+    margin-bottom: 6.75vw;
+  }
+  
 }
 
 @media (max-aspect-ratio: 5/9) {
@@ -266,11 +282,26 @@ img {
     width: 48vw;
     margin: 2vw;
   }
+  .contact-title {
+    width: 49.51vw;
+    height: 14.28vw; 
+    margin-bottom: 9vw; 
+  }
+  
 }
 
 @media (max-aspect-ratio: 5/11) {
+  .container {
+    max-width: 90vw;
+  }
   .flx .flx-half {
     width: 60vw;
     margin: 3vw;
   }
+  .contact-title {
+    width: 66.94vw;
+    height: 19.31vw;
+    margin-bottom: 12.15vw;
+  }
+  
 }
