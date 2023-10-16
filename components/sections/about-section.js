@@ -19,7 +19,7 @@ const AboutSection = () => {
         <JellyWaves />
       </div>
       <div className="flx center container above">
-        <div className="flx-col flx column center flx-m-row">
+        <div className="flx-col flx column center m-row">
           <Image
             src="/green-bean.png"
             className="bean"
