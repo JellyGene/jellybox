@@ -23,7 +23,7 @@
 .section.section-footer :global(.fp-overflow) {
   background-color: #00bd64;
   box-shadow: none;
-  padding: 30px;
+  padding: 1.56vw;
 }
 .section-footer ul {
   list-style: none;
@@ -31,11 +31,11 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 0 0 5px;
+  margin: 0 0 0.26vw;
   padding: 0;
 }
 .section-footer ul li {
-  margin: 0 5px;
+  margin: 0 0.26vw;
 }
 
 .section .section-wrapper {

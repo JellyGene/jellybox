@@ -18,8 +18,10 @@ function JellyBoxLayout({ children }) {
     <article className={candyBean.className}>
       <ReactFullpage
         licenseKey="gplv3-license"
-        scrollingSpeed={800}
+        scrollingSpeed={950}
         scrollBar={true}
+        css3={true}
+        easingcss3="ease-in"
         afterLoad={(origin, destination, direction, trigger) => {
           const destinationIndex = destination.index;
           const pages = ["/", "/about", "/services", "/work", "/contact"];

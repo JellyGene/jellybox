@@ -474,3 +474,299 @@
   margin: 0.4167vw 0.4167vw 0.4167vw 2.6042vw;
 }
 
+@media (max-aspect-ratio: 7/5) {
+  .blob {
+    width: 13.0209vw;
+    height: 13.0209vw;
+    padding: 1.9531vw;
+  }
+
+  .blob.blob-pres-bean {
+    width: 17.7083vw;
+    height: 10.4166vw;
+    padding: 6.8359vw 1.9531vw 1.9531vw;
+  }
+
+  .blob.blob-about {
+    width: 30.4687vw;
+    height: 22.1354vw;
+    padding: 10.625vw 1.9531vw 1.9531vw;
+  }
+
+  .blob.blob-about-2 {
+    width: 32.1615vw;
+    height: 17.1875vw;
+    margin: 1.3021vw 0 0 4.8828vw;
+  }
+
+  .blob.blob-work {
+    width: 23.175vw;
+    height: 14.7125vw;
+    padding: 6.875vw 1.9531vw 1.9531vw;
+  }
+
+  .blob.blob-service {
+    width: 25.1302vw;
+    height: 14.7786vw;
+    padding: 5.6641vw 1.9531vw 1.9531vw;
+  }
+
+  .blob.blob-animation-services {
+    width: 18.2292vw;
+    height: 15.625vw;
+    padding: 11.0677vw 1.9531vw 1.9531vw;
+  }
+
+  .blob.blob-design-services {
+    width: 8.724vw;
+    height: 9.1146vw;
+    padding: 6.7057vw 1.9531vw 0.7812vw;
+  }
+
+  .blob.blob-editing-services {
+    width: 8.724vw;
+    height: 6.4453vw;
+    padding: 3.9063vw 1.9531vw 0.6509vw;
+  }
+
+  .blob.blob-merch-services {
+    width: 12.5977vw;
+    height: 12.4512vw;
+    padding: 9.2773vw 1.4648vw 1.4648vw;
+  }
+
+  .blob.blob-music-services {
+    width: 8.4635vw;
+    height: 7.4869vw;
+    padding: 4.8828vw 1.9531vw 0.6509vw;
+  }
+
+  .blob.blob-post-services {
+    width: 9.6354vw;
+    height: 8.3333vw;
+    padding: 5.2083vw 1.9531vw 0.6509vw;
+    line-height: 0.85;
+  }
+
+  .blob.blob-production-services {
+    width: 19.1406vw;
+    height: 15.7552vw;
+    padding: 11.0677vw 1.9531vw 1.9531vw;
+  }
+
+  .blob.blob-sound-services {
+    width: 9.6354vw;
+    height: 7.4226vw;
+    padding: 4.8828vw 1.9531vw 0.6509vw;
+  }
+
+  .blob.blob-storyboards-services {
+    width: 10.026vw;
+    height: 8.6589vw;
+    padding: 6.184vw 1.9531vw 0.6509vw;
+  }
+
+  .blob.blob-writing-services {
+    width: 16.5365vw;
+    height: 16.0156vw;
+    padding: 11.3932vw 1.9531vw 1.9531vw;
+  }
+}
+
+@media (max-aspect-ratio: 5.5/5) {
+  .blob {
+    width: 15.6251vw;
+    height: 15.6251vw;
+    padding: 2.3438vw;
+  }
+
+  .blob.blob-pres-bean {
+    width: 21.2501vw;
+    height: 12.4999vw;
+    padding: 8.2031vw 2.3438vw 2.3438vw;
+  }
+
+  .blob.blob-about {
+    width: 36.5625vw;
+    height: 26.5625vw;
+    padding: 12.75vw 2.3438vw 2.3438vw;
+  }
+
+  .blob.blob-about-2 {
+    width: 38.5938vw;
+    height: 20.625vw;
+    margin: 1.5625vw 0 0 5.8594vw;
+  }
+
+  .blob.blob-work {
+    width: 27.8101vw;
+    height: 17.655vw;
+    padding: 8.25vw 2.3438vw 2.3438vw;
+  }
+
+  .blob.blob-service {
+    width: 30.1563vw;
+    height: 17.7343vw;
+    padding: 6.7701vw 2.3438vw 2.3438vw;
+  }
+
+  .blob.blob-animation-services {
+    width: 21.8751vw;
+    height: 18.75vw;
+    padding: 13.2813vw 2.3438vw 2.3438vw;
+  }
+
+  .blob.blob-design-services {
+    width: 10.4684vw;
+    height: 10.9375vw;
+    padding: 8.0469vw 2.3438vw 0.9375vw;
+  }
+
+  .blob.blob-editing-services {
+    width: 10.4684vw;
+    height: 7.7344vw;
+    padding: 4.6875vw 2.3438vw 0.6251vw;
+  }
+
+  .blob.blob-merch-services {
+    width: 16.7969vw;
+    height: 16.6016vw;
+    padding: 12.3697vw 1.9531vw 1.9531vw;
+  }
+
+  .blob.blob-music-services {
+    width: 10.1563vw;
+    height: 8.9844vw;
+    padding: 5.8594vw 2.3438vw 0.6251vw;
+  }
+
+  .blob.blob-post-services {
+    width: 11.5625vw;
+    height: 10.0001vw;
+    padding: 6.25vw 2.3438vw 0.6251vw;
+    line-height: 0.85;
+  }
+
+  .blob.blob-production-services {
+    width: 22.9688vw;
+    height: 18.9063vw;
+    padding: 13.2813vw 2.3438vw 2.3438vw;
+  }
+
+  .blob.blob-sound-services {
+    width: 11.5625vw;
+    height: 8.9063vw;
+    padding: 5.8594vw 2.3438vw 0.6251vw;
+  }
+
+  .blob.blob-storyboards-services {
+    width: 12.0313vw;
+    height: 10.3926vw;
+    padding: 7.136vw 2.3438vw 0.6251vw;
+  }
+
+  .blob.blob-writing-services {
+    width: 19.8438vw;
+    height: 19.2188vw;
+    padding: 13.9375vw 2.3438vw 2.3438vw;
+  }
+}
+
+@media (max-aspect-ratio: 5/5.5) {
+  .blob {
+    width: 20.3157vw;
+    height: 20.3157vw;
+    padding: 3.0469vw;
+  }
+
+  .blob.blob-pres-bean {
+    width: 27.6251vw;
+    height: 16.2499vw;
+    padding: 10.664vw 3.0469vw 3.0469vw;
+  }
+
+  .blob.blob-about {
+    width: 47.5781vw;
+    height: 34.5781vw;
+    padding: 16.575vw 3.0469vw 3.0469vw;
+  }
+
+  .blob.blob-about-2 {
+    width: 50.3125vw;
+    height: 26.8125vw;
+    margin: 1.9531vw 0 0 7.6797vw;
+  }
+
+  .blob.blob-work {
+    width: 36.1531vw;
+    height: 22.9915vw;
+    padding: 10.6875vw 3.0469vw 3.0469vw;
+  }
+
+  .blob.blob-service {
+    width: 39.1952vw;
+    height: 23.1006vw;
+    padding: 8.821vw 3.0469vw 3.0469vw;
+  }
+
+  .blob.blob-animation-services {
+    width: 28.4376vw;
+    height: 24.375vw;
+    padding: 17.3047vw 3.0469vw 3.0469vw;
+  }
+
+  .blob.blob-design-services {
+    width: 13.6092vw;
+    height: 14.2187vw;
+    padding: 10.4375vw 3.0469vw 1.1719vw;
+  }
+
+  .blob.blob-editing-services {
+    width: 13.6092vw;
+    height: 10.156vw;
+    padding: 5.8594vw 3.0469vw 0.8127vw;
+  }
+
+  .blob.blob-merch-services {
+    width: 21.0356vw;
+    height: 20.8012vw;
+    padding: 15.5272vw 2.3438vw 2.3438vw;
+  }
+
+  .blob.blob-music-services {
+    width: 13.2038vw;
+    height: 11.6812vw;
+    padding: 7.6328vw 3.0469vw 0.8127vw;
+  }
+
+  .blob.blob-post-services {
+    width: 14.9844vw;
+    height: 12.5001vw;
+    padding: 7.8125vw 3.0469vw 0.7813vw;
+    line-height: 0.85;
+  }
+
+  .blob.blob-production-services {
+    width: 29.361vw;
+    height: 24.6878vw;
+    padding: 17.3047vw 3.0469vw 3.0469vw;
+  }
+
+  .blob.blob-sound-services {
+    width: 14.4844vw;
+    height: 11.0785vw;
+    padding: 7.6328vw 3.0469vw 0.7813vw;
+  }
+
+  .blob.blob-storyboards-services {
+    width: 15.6389vw;
+    height: 13.0119vw;
+    padding: 8.9632vw 3.0469vw 0.7813vw;
+  }
+
+  .blob.blob-writing-services {
+    width: 25.8095vw;
+    height: 23.0626vw;
+    padding: 13.9375vw 3.0469vw 3.0469vw;
+  }
+}
