@@ -146,6 +146,9 @@ img {
   .m-or3 {
     order: 3;
   }
+  .flx .flx-half {
+    width: 31vw;
+  }
 }
 
 @media (max-aspect-ratio: 7/5) {
@@ -210,8 +213,15 @@ img {
   .small {
     font-size: 1.38vw;
   }
+  .container {
+    max-width: 78vw;
+  }
   .container.service-container {
     max-width: 75vw;
+  }
+  .flx .flx-half {
+    width: 35vw;
+    margin: 1.15vw 0;
   }
   .bean {
     width: 30.53vw;
@@ -241,9 +251,26 @@ img {
   .container.service-container {
     max-width: 92vw;
   }
+  .flx .flx-half {
+    width: 39vw;
+    margin: 1vw 0;
+  }
   .bean {
     width: 39.68vw;
     height: 46.6vw;
+  } 
+}
+
+@media (max-aspect-ratio: 5/9) {
+  .flx .flx-half {
+    width: 48vw;
+    margin: 2vw;
   }
 }
 
+@media (max-aspect-ratio: 5/11) {
+  .flx .flx-half {
+    width: 60vw;
+    margin: 3vw;
+  }
+}

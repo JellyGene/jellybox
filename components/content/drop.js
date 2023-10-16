@@ -20,7 +20,7 @@ const Drop = ({
         <header className={styles["drop-title"]}>
           <h3 className={`uppercase ${starCartoon.className}`}>{title}</h3>
         </header>
-        <div className="drop-body small">{children}</div>
+        <div className={styles["drop-body"]}>{children}</div>
       </a>
       <div className={styles["drop-image"]}>
         <Image
