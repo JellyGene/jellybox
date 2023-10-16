@@ -1,6 +1,6 @@
 .section:not(:global(.fp-auto-height)) .section-wrapper,
 .section:not(:global(.fp-auto-height)) :global(.fp-overflow) {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .section :global(.fp-overflow) {

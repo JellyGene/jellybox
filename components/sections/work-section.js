@@ -16,7 +16,7 @@ const WorkSection = () => {
           <br />
           <span className="highlight large">best work</span>.
         </Blob>
-        <div className="flx spaced">
+        <div className="flx around">
           <Drop
             title="Planet Panic"
             poster="/work/planet-panic-poster.png"

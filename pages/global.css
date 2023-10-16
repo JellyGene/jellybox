@@ -7,7 +7,8 @@
 html,
 body {
   line-height: 1.15;
-  font-size: 18px;
+  /*font-size: 18px;*/
+  font-size: 0.95vw;
 }
 
 h1,
@@ -35,8 +36,8 @@ img {
 .flx.column {
   flex-direction: column;
 }
-.flx.spaced {
-  justify-content: space-between;
+.flx.around {
+  justify-content: space-around;
 }
 .flx.center {
   justify-content: center;
@@ -44,27 +45,24 @@ img {
 }
 .flx.align-bottom {
   align-items: flex-end;
-  height: 100%;
-}
-.flx.remove-marg {
-  margin: 0 -2.5%;
+  min-height: 100vh;
 }
 .flx .flx-half {
-  width: 47%;
-  margin: 1.5%;
+  width: 23vw;
+  margin: 0.68vw 0;
 }
 
 .highlight {
   color: #016767;
 }
 .large {
-  font-size: 22px;
+  font-size: 1.15vw;
 }
 .extra-large {
-  font-size: 30px;
+  font-size: 1.56vw;
 }
 .small {
-  font-size: 14px;
+  font-size: 0.73vw;
 }
 .uppercase {
   text-transform: uppercase;
@@ -86,12 +84,12 @@ img {
 }
 
 .container {
-  width: 100%;
-  max-width: 1033px;
-  padding: 0 20px;
+  width: 100vw;
+  max-width: 52vw;
+  padding: 0 1.0416vw;
 }
 .container.service-container {
-  max-width: 1475px;
+  max-width: 77vw;
 }
 
 .reel-wrapper {

@@ -1,7 +1,8 @@
 .drop {
   display: block;
   position: relative;
-  border-radius: 60px;
+  /*border-radius: 60px;*/
+  border-radius: 3.125vw;
   overflow: hidden;
 }
 
