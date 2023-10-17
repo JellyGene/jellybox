@@ -21,7 +21,9 @@ function JellyBoxLayout({ children }) {
         scrollingSpeed={950}
         scrollBar={true}
         css3={true}
+        autoScrolling={false}
         easingcss3="ease-in"
+        credits={{ enabled: false }}
         afterLoad={(origin, destination, direction, trigger) => {
           const destinationIndex = destination.index;
           const pages = ["/", "/about", "/services", "/work", "/contact"];
