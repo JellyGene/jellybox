@@ -85,6 +85,7 @@ img {
 .container {
   width: 100vw;
   max-width: 52vw;
+  margin: 0 auto;
   padding: 0 1.0416vw;
 }
 .container.service-container {

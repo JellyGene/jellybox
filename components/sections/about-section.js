@@ -13,6 +13,7 @@ const AboutSection = () => {
           position: "absolute",
           top: 0,
           transform: "rotate(180deg)",
+          width: "100%",
           zIndex: 4,
         }}
       >
