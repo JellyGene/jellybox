@@ -22,7 +22,9 @@ function JellyBoxLayout({ children }) {
         scrollBar={true}
         css3={true}
         autoScrolling={false}
+        verticalCentered={false}
         easingcss3="ease-in"
+        sectionsColor={["transparent", "#35fb58", "#35fb58", "#35fb58", "#35fb58", "#00bd64"]}
         credits={{ enabled: false }}
         afterLoad={(origin, destination, direction, trigger) => {
           const destinationIndex = destination.index;
