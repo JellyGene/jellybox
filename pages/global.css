@@ -78,8 +78,15 @@ img {
   border: 0 !important;
 }
 
+.push-down {
+  margin-bottom: 6vw;
+}
+.push-down.med-100 {
+  margin-bottom: 0vw;
+}
+
 .fullpage-wrapper {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .container {
@@ -127,7 +134,7 @@ img {
 
 @media (max-aspect-ratio: 8/5) {
   .container {
-    max-width: 70vw;
+    max-width: 78vw;
   }
   .container.service-container {
     max-width: 51vw;
@@ -147,8 +154,13 @@ img {
   .m-or3 {
     order: 3;
   }
+  .push-down.med-100,
+  .push-down {
+    margin-bottom: 3vw;
+  }
   .flx .flx-half {
-    width: 31vw;
+    width: 35vw;
+    margin: 1.15vw 0;
   }
 }
 
@@ -178,7 +190,6 @@ img {
     height: 7.04vw;
     margin-bottom: 3.5vw;
   }
-  
 }
 
 @media (max-aspect-ratio: 5.5/5) {
@@ -207,7 +218,6 @@ img {
     height: 8.45vw;
     margin-bottom: 5vw;
   }
-  
 }
 
 @media (max-aspect-ratio: 5/5.5) {
@@ -224,23 +234,17 @@ img {
   .small {
     font-size: 1.38vw;
   }
-  .container {
-    max-width: 78vw;
-  }
   .container.service-container {
     max-width: 75vw;
   }
   .flx .flx-half {
-    width: 35vw;
-    margin: 1.15vw 0;
+    width: 48vw;
   }
   .bean {
     width: 30.53vw;
     height: 35.92vw;
   }
-  
 }
-
 
 @media (max-aspect-ratio: 5/7) {
   html,
@@ -263,46 +267,39 @@ img {
     max-width: 92vw;
   }
   .flx .flx-half {
-    width: 39vw;
-    margin: 1vw 0;
+    width: 60vw;
+    margin: 2vw 0;
   }
   .bean {
     width: 39.68vw;
     height: 46.6vw;
-  } 
+  }
   .contact-title {
-    width: 39.61vw; 
+    width: 39.61vw;
     height: 11.42vw;
     margin-bottom: 6.75vw;
   }
-  
 }
 
 @media (max-aspect-ratio: 5/9) {
-  .flx .flx-half {
-    width: 48vw;
-    margin: 2vw;
-  }
   .contact-title {
     width: 49.51vw;
-    height: 14.28vw; 
-    margin-bottom: 9vw; 
+    height: 14.28vw;
+    margin-bottom: 9vw;
   }
-  
+  .flx .flx-half {
+    width: 100%;
+    margin: 3vw 0;
+  }
 }
 
 @media (max-aspect-ratio: 5/11) {
   .container {
     max-width: 90vw;
   }
-  .flx .flx-half {
-    width: 60vw;
-    margin: 3vw;
-  }
   .contact-title {
     width: 66.94vw;
     height: 19.31vw;
     margin-bottom: 12.15vw;
   }
-  
 }

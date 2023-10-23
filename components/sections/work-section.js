@@ -7,7 +7,7 @@ const WorkSection = () => {
   return (
     <>
       <div className="flx column container center above">
-        <Blob title="Work" idNum="work">
+        <Blob title="Work" idNum="work" className="push-down">
           We love working with a variety of
           <br />
           <span className="highlight">production styles</span> and{" "}

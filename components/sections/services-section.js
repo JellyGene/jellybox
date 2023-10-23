@@ -6,7 +6,7 @@ const ServicesSection = () => {
   return (
     <>
       <div className="flx container service-container center above">
-        <div className="med-100 flx center">
+        <div className="med-100 push-down flx center">
           <Blob title="Services" idNum="service" className="services">
             Thanks to our
             <br />
