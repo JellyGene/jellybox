@@ -22,7 +22,7 @@ const socialGroup = [
   },
   {
     social: "tiktok",
-    link: "https://www.tiktok.com/@genegoldstein",
+    link: "https://www.tiktok.com/@jellybox_studio",
   },
 ];
 

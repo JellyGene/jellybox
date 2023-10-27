@@ -14,6 +14,12 @@ function JellyBoxLayout({ children }) {
     }
   }, []);
 
+  const addLoadedClass = (destination) => {
+    if (!destination.item.classList.contains("loaded")) {
+      destination.item.classList.add("loaded");
+    }
+  };
+
   return (
     <article className={candyBean.className}>
       <ReactFullpage
@@ -30,21 +36,28 @@ function JellyBoxLayout({ children }) {
           "#35fb58",
           "#35fb58",
           "#35fb58",
-          "#00bd64",
+          "#35fb58",
         ]}
         credits={{ enabled: false }}
         afterLoad={(origin, destination, direction, trigger) => {
           const destinationIndex = destination.index;
           const pages = ["/", "/about", "/services", "/work", "/contact"];
 
-          if (router.pathname !== "/" && origin.index === destinationIndex) {
-            const incomingSection = pages.findIndex(
-              (item) => item === router.pathname
-            );
+          if (destinationIndex !== -1) {
+            if (router.pathname !== "/" && origin.index === destinationIndex) {
+              console.log({ origin, destination });
+              console.log("======");
+              const incomingSection = pages.findIndex(
+                (item) => item === router.pathname
+              );
 
-            window.fullpage_api.silentMoveTo(incomingSection + 1, 0);
-          } else if (origin.index !== pages[destinationIndex]) {
-            window.history.pushState(null, null, pages[destinationIndex]);
+              window.fullpage_api.silentMoveTo(incomingSection + 1);
+            } else if (origin.index !== pages[destinationIndex]) {
+              window.history.pushState(null, null, pages[destinationIndex]);
+              addLoadedClass(destination);
+            }
+          } else if (destinationIndex === -1 || router.pathname === "/") {
+            addLoadedClass(destination);
           }
         }}
         render={({ state, fullpageApi }) => {

@@ -13,16 +13,13 @@
     0 12vw 5vw -5vw #00bd64 inset;
   padding-top: 25vw;
 }
-.section.section-contact {
-  box-shadow: 12vw 0 5vw -6vw #00bd64 inset, -12vw 0 5vw -6vw #00bd64 inset,
-    0 -10vw 5vw -5vw #00bd64 inset;
-}
 .section.section-home {
   box-shadow: none;
 }
 .section.section-footer {
-  box-shadow: none;
-  padding: 1.56vw;
+  box-shadow: 12vw 0 5vw -6vw #00bd64 inset, -12vw 0 5vw -6vw #00bd64 inset,
+    0 -10vw 5vw -5vw #00bd64 inset;
+  padding: 3vw 2vw;
 }
 .section-footer ul {
   list-style: none;
@@ -30,7 +27,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 0 0 0.26vw;
+  margin: 0 0 3vw;
   padding: 0;
 }
 .section-footer ul li {
@@ -39,4 +36,21 @@
 
 .section-footer :global(.fp-overflow) {
   overflow: hidden !important;
+}
+
+.section :global(.container),
+.section nav {
+  opacity: 0;
+  transition: all 500ms ease-in;
+}
+
+.section:global(.loaded) :global(.container),
+.section:global(.loaded) nav {
+  opacity: 1;
+}
+
+@media (max-aspect-ratio: 5/5.5) {
+  .section.section-home:global(.fp-auto-height):global(.fp-section) {
+    height: 56vw !important;
+  }
 }
