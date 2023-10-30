@@ -16,6 +16,9 @@
 .section.section-home {
   box-shadow: none;
 }
+.section-home:global(.fp-is-overflow) > :global(.fp-overflow) {
+  overflow-y: hidden;
+}
 .section.section-footer {
   box-shadow: 12vw 0 5vw -6vw #00bd64 inset, -12vw 0 5vw -6vw #00bd64 inset,
     0 -10vw 5vw -5vw #00bd64 inset;
@@ -38,14 +41,16 @@
   overflow: hidden !important;
 }
 
-.section :global(.container),
-.section nav {
+.section .section-wrapper :global(.container),
+.section .section-wrapper nav,
+.section :global(.foot-wrapper) {
   opacity: 0;
   transition: all 500ms ease-in;
 }
 
-.section:global(.loaded) :global(.container),
-.section:global(.loaded) nav {
+.section .section-wrapper:global(.loaded) :global(.container),
+.section .section-wrapper:global(.loaded) nav,
+.section :global(.foot-wrapper.loaded) {
   opacity: 1;
 }
 

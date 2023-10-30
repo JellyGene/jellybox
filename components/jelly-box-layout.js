@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import ReactFullpage from "@fullpage/react-fullpage";
 
 import BackgroundVideo from "./background-video";
-import { starCartoon, candyBean } from "./fonts/fonts";
+import { candyBean } from "./fonts/fonts";
 
 function JellyBoxLayout({ children }) {
   const router = useRouter();
@@ -45,8 +45,6 @@ function JellyBoxLayout({ children }) {
 
           if (destinationIndex !== -1) {
             if (router.pathname !== "/" && origin.index === destinationIndex) {
-              console.log({ origin, destination });
-              console.log("======");
               const incomingSection = pages.findIndex(
                 (item) => item === router.pathname
               );
@@ -54,10 +52,7 @@ function JellyBoxLayout({ children }) {
               window.fullpage_api.silentMoveTo(incomingSection + 1);
             } else if (origin.index !== pages[destinationIndex]) {
               window.history.pushState(null, null, pages[destinationIndex]);
-              addLoadedClass(destination);
             }
-          } else if (destinationIndex === -1 || router.pathname === "/") {
-            addLoadedClass(destination);
           }
         }}
         render={({ state, fullpageApi }) => {

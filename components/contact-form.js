@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./form.module.css";
+import { arialRoundedBold } from "./fonts/fonts";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -81,7 +82,7 @@ const ContactForm = () => {
           id="name"
           name="name"
           placeholder="Name"
-          className="contact-form-name"
+          className={`contact-form-name ${arialRoundedBold.className}`}
           value={formData.name}
           onChange={handleChange}
           disabled={isFormDisabled()}
@@ -97,7 +98,7 @@ const ContactForm = () => {
           id="email"
           name="email"
           placeholder="Email"
-          className="contact-form-email"
+          className={`contact-form-email ${arialRoundedBold.className}`}
           value={formData.email}
           onChange={handleChange}
           disabled={isFormDisabled()}
@@ -112,7 +113,7 @@ const ContactForm = () => {
           name="message"
           id="message"
           placeholder="Message"
-          className="contact-form-message"
+          className={`contact-form-message ${arialRoundedBold.className}`}
           value={formData.message}
           onChange={handleChange}
           disabled={isFormDisabled()}

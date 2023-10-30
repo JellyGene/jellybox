@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { useInView } from "react-intersection-observer";
 
 import styles from "./sections/section.module.css";
 
@@ -48,11 +49,18 @@ const SocialList = () => {
 };
 
 const Footer = ({ children }) => {
+  const { ref, inView } = useInView({
+    threshold: 0,
+    triggerOnce: true,
+  });
   return (
     <footer
+      ref={ref}
       className={`section ${styles.section} ${styles["section-footer"]} fp-auto-height`}
     >
-      <div className="flx column center">
+      <div
+        className={`foot-wrapper flx column center ${inView ? "loaded" : ""}`}
+      >
         <SocialList />
         <div>
           <span className="uppercase">&copy; Jellybox 2023</span>
