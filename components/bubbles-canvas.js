@@ -79,6 +79,29 @@ const BubbleCanvas = () => {
       const canvas = canvasRef.current;
       const ctx = canvas.getContext("2d");
 
+      const distanceToBottom = this.canvasHeight - this.y; // Calculate distance to bottom
+      const maxDistance = this.canvasHeight + this.radius;
+
+      const fadeStartDistance = maxDistance * 0.8; // Adjust the fade-in start distance
+
+      let opacity = 1;
+
+      if (distanceToBottom < fadeStartDistance) {
+        opacity = distanceToBottom / fadeStartDistance;
+      }
+
+      if (distanceToBottom > maxDistance) {
+        this.active = false;
+        return;
+      }
+
+      if (opacity <= 0) {
+        this.active = false;
+        return;
+      }
+
+      ctx.globalAlpha = opacity;
+
       ctx.drawImage(
         this.image,
         this.x - this.radius,
@@ -86,6 +109,8 @@ const BubbleCanvas = () => {
         this.radius * 2,
         this.radius * 2
       );
+
+      ctx.globalAlpha = 1; // Reset global alpha for other elements
     }
 
     inBounds() {

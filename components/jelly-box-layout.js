@@ -14,12 +14,6 @@ function JellyBoxLayout({ children }) {
     }
   }, []);
 
-  const addLoadedClass = (destination) => {
-    if (!destination.item.classList.contains("loaded")) {
-      destination.item.classList.add("loaded");
-    }
-  };
-
   return (
     <article className={candyBean.className}>
       <ReactFullpage

@@ -3,9 +3,12 @@
 }
 .section.section-about,
 .section.section-services,
-.section.section-work,
-.section.section-contact {
+.section.section-work {
   padding-bottom: 25vw;
+}
+
+.section.section-contact {
+  padding-bottom: 10vw;
 }
 
 .section.section-about {
@@ -22,7 +25,7 @@
 .section.section-footer {
   box-shadow: 12vw 0 5vw -6vw #00bd64 inset, -12vw 0 5vw -6vw #00bd64 inset,
     0 -10vw 5vw -5vw #00bd64 inset;
-  padding: 3vw 2vw;
+  padding: 3vw 2vw 6vw;
 }
 .section-footer ul {
   list-style: none;
@@ -57,5 +60,21 @@
 @media (max-aspect-ratio: 5/5.5) {
   .section.section-home:global(.fp-auto-height):global(.fp-section) {
     height: 56vw !important;
+  }
+}
+
+@media (max-aspect-ratio: 5/7) {
+  .section-footer ul li img {
+    width: 45px;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 5/9) {
+  .section-footer ul li {
+    margin: 0 1vw;
+  }
+  .section-footer ul li img {
+    width: 14vw;
   }
 }
