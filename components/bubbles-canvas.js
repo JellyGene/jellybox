@@ -79,15 +79,17 @@ const BubbleCanvas = () => {
       const canvas = canvasRef.current;
       const ctx = canvas.getContext("2d");
 
-      const distanceToBottom = this.canvasHeight - this.y; // Calculate distance to bottom
+      const distanceToBottom = this.canvasHeight - this.y;
       const maxDistance = this.canvasHeight + this.radius;
 
-      const fadeStartDistance = maxDistance * 0.8; // Adjust the fade-in start distance
+      const fadeStartDistance = maxDistance * 0.15;
 
       let opacity = 1;
 
       if (distanceToBottom < fadeStartDistance) {
         opacity = distanceToBottom / fadeStartDistance;
+      } else if (this.y < fadeStartDistance) {
+        opacity = this.y / fadeStartDistance;
       }
 
       if (distanceToBottom > maxDistance) {
@@ -110,7 +112,7 @@ const BubbleCanvas = () => {
         this.radius * 2
       );
 
-      ctx.globalAlpha = 1; // Reset global alpha for other elements
+      ctx.globalAlpha = 1;
     }
 
     inBounds() {
@@ -142,7 +144,7 @@ const BubbleCanvas = () => {
         top: 0,
         left: 0,
         right: 0,
-        bottom: 0,
+        height: "100%",
         zIndex: 0,
       }}
       className="bubbles"
