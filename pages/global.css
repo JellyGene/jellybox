@@ -10,6 +10,10 @@ body {
   font-size: 0.95vw;
 }
 
+body {
+  background-color: #00bd64;
+}
+
 h1,
 h2,
 h3,
@@ -53,6 +57,9 @@ img {
 
 .highlight {
   color: #016767;
+}
+.legal {
+  color: #00805d;
 }
 .large {
   font-size: 1.15vw;
@@ -138,6 +145,10 @@ img {
 .above {
   position: relative;
   z-index: 1;
+}
+
+.wave {
+  height: 50px;
 }
 
 @media (max-aspect-ratio: 8/5) {
@@ -289,6 +300,9 @@ img {
     width: 39.61vw;
     height: 11.42vw;
     margin-bottom: 6.75vw;
+  }
+  .wave {
+    height: 35px;
   }
 }
 

@@ -63,7 +63,7 @@ const Footer = ({ children }) => {
       >
         <SocialList />
         <div>
-          <span className="uppercase">&copy; Jellybox 2023</span>
+          <span className="uppercase legal">&copy; Jellybox 2023</span>
         </div>
       </div>
     </footer>

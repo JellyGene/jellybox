@@ -58,8 +58,29 @@
 }
 
 @media (max-aspect-ratio: 5/5.5) {
+  .section {
+    box-shadow: 30vw 0 20vw -20vw #00bd64 inset,
+      -30vw 0 20vw -20vw #00bd64 inset;
+  }
+  .section.section-about {
+    box-shadow: 30vw 0 20vw -20vw #00bd64 inset,
+      -30vw 0 20vw -20vw #00bd64 inset, 0 30vw 20vw -20vw #00bd64 inset;
+  }
+  .section.section-footer {
+    box-shadow: 30vw 0 20vw -20vw #00bd64 inset,
+      -30vw 0 20vw -20vw #00bd64 inset, 0 -16vw 10vw -10vw #00bd64 inset;
+  }
+
   .section.section-home:global(.fp-auto-height):global(.fp-section) {
     height: 56vw !important;
+  }
+  .section.section-about {
+    margin-top: -1px;
+  }
+  section.section-services,
+  .section.section-work,
+  .section.section-contact {
+    margin-top: -2px;
   }
 }
 

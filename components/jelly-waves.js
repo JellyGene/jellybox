@@ -9,11 +9,11 @@ const JellyWaves = () => {
         paused={false}
         style={{
           position: "absolute",
-          bottom: "-1px",
-          left: "-1px",
-          width: "100vw",
-          height: "50px",
+          bottom: "0",
+          left: "0",
+          width: "100%",
         }}
+        className="wave"
         options={{
           height: 10,
           amplitude: 15,
