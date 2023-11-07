@@ -35,7 +35,7 @@ const WorkSection = () => {
           <Drop
             title="Poison Pop"
             poster="/work/poisonpop-poster.png"
-            link="https://youtu.be/M5c56viVSbs?si=5pw8DStTdd5p3u1u"
+            link="https://youtu.be/3srgg3lsksE?si=jz-09JNVI41FnZQF"
             className="flx-half"
           >
             <p>
@@ -56,7 +56,7 @@ const WorkSection = () => {
           <Drop
             title="NOXP"
             poster="/work/noxp-poster.png"
-            link="https://youtu.be/M5c56viVSbs?si=5pw8DStTdd5p3u1u"
+            link="https://youtu.be/FnPdjYbaHp8?si=K_CmBl-OVm0F75Bs"
             className="flx-half"
           >
             <p>
@@ -73,7 +73,7 @@ const WorkSection = () => {
           <Drop
             title="How To Survive"
             poster="/work/how-to-survive-poster.png"
-            link="https://youtu.be/M5c56viVSbs?si=5pw8DStTdd5p3u1u"
+            link="https://youtu.be/8Q5Xx803twA?si=kkvGUewQPShdDO7D"
             className="flx-half"
           >
             <p>
