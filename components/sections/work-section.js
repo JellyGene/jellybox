@@ -8,12 +8,9 @@ const WorkSection = () => {
     <>
       <div className="flx column container center above">
         <Blob title="Work" idNum="work" className="push-down">
-          We love working with a variety of
-          <br />
+          We love working with a variety of{" "}
           <span className="highlight">production styles</span> and{" "}
-          <span className="highlight">mediums</span>!<br />
-          Here is a showcase of our
-          <br />
+          <span className="highlight">mediums</span>! Here is a showcase of our{" "}
           <span className="highlight large">best work</span>.
         </Blob>
         <div className="flx around">

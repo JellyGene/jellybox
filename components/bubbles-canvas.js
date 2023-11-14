@@ -4,25 +4,40 @@ import { createCanvas, loadImage } from "canvas";
 const BubbleCanvas = () => {
   const canvasRef = useRef(null);
   const bubbles = [];
-  const bubbleImage = createCanvas(40, 40);
-  const bubbleImageContext = bubbleImage.getContext("2d");
-  let animationId;
+  const bubbleImageRef = useRef(null);
+  const animationIdRef = useRef(null);
+  const resizeFlagRef = useRef(false); // Flag to handle resize
 
   const canvasDraw = () => {
+    if (resizeFlagRef.current) {
+      // Clear the flag and reset animation
+      resizeFlagRef.current = false;
+      animationIdRef.current = requestAnimationFrame(canvasDraw);
+      return;
+    }
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
     const canvasWidth = window.innerWidth;
     const canvasHeight = window.innerHeight;
 
+    // Update canvas dimensions when the window size changes
+    canvas.width = canvasWidth;
+    canvas.height = canvasHeight;
+
     ctx.clearRect(0, 0, canvasWidth, canvasHeight);
     bubbles.forEach((bubble) => bubble.update());
-    animationId = requestAnimationFrame(canvasDraw);
+    animationIdRef.current = requestAnimationFrame(canvasDraw);
   };
 
   useEffect(() => {
+    let animationId;
+    const bubbleImage = createCanvas(40, 40);
+    const bubbleImageContext = bubbleImage.getContext("2d");
+
     const loadImageData = async () => {
       const img = await loadImage("/backgrounds/bubble.png");
       bubbleImageContext.drawImage(img, 0, 0, 40, 40);
+      bubbleImageRef.current = bubbleImage;
       canvasInit();
     };
 
@@ -35,31 +50,41 @@ const BubbleCanvas = () => {
 
       const canvasAddBubbles = () => {
         if (!document.hidden) {
-          const bubble = new Bubble(canvasWidth, canvasHeight, bubbleImage);
+          const bubble = new Bubble(
+            canvasWidth,
+            canvasHeight,
+            bubbleImageRef.current
+          );
           bubble.draw();
           bubbles.push(bubble);
         }
       };
 
       setInterval(() => canvasAddBubbles(), 500);
-      animationId = requestAnimationFrame(canvasDraw);
+      animationIdRef.current = requestAnimationFrame(canvasDraw);
     };
 
     loadImageData();
 
     const handleVisibilityChange = () => {
       if (document.hidden) {
-        cancelAnimationFrame(animationId); // Pause animation
+        cancelAnimationFrame(animationIdRef.current);
       } else {
-        animationId = requestAnimationFrame(canvasDraw); // Resume animation
+        animationIdRef.current = requestAnimationFrame(canvasDraw);
       }
     };
-
     document.addEventListener("visibilitychange", handleVisibilityChange);
+    const handleResize = () => {
+      // Set the flag to handle resize event
+      resizeFlagRef.current = true;
+    };
+    window.addEventListener("resize", handleResize);
 
     return () => {
       document.removeEventListener("visibilitychange", handleVisibilityChange);
+      window.removeEventListener("resize", handleResize); // Cleanup resize listener
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   class Bubble {

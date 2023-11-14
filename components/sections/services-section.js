@@ -15,8 +15,8 @@ const ServicesSection = () => {
             <span className="highlight">broad range of world-class talent</span>
             ,<br />
             we can provide{" "}
-            <span className="highlight">all of these services</span>
-            <br /> for your project:
+            <span className="highlight">all of these services</span> for your
+            project:
           </Blob>
         </div>
         <Blob title="Animation" idNum="animation-services" className="services">

@@ -56,7 +56,8 @@ img {
 }
 
 .highlight {
-  color: #016767;
+  /*color: #016767;*/
+  color: #e63462;
 }
 .legal {
   color: #00805d;
@@ -69,6 +70,7 @@ img {
 }
 .small {
   font-size: 0.73vw;
+  line-height: 1;
 }
 .uppercase {
   text-transform: uppercase;
