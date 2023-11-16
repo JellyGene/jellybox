@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import ReactFullpage from "@fullpage/react-fullpage";
 
 import BackgroundVideo from "./background-video";
-import { lexend } from "./fonts/fonts";
+import { candyBean } from "./fonts/fonts";
 
 function JellyBoxLayout({ children }) {
   const router = useRouter();
@@ -15,7 +15,7 @@ function JellyBoxLayout({ children }) {
   }, []);
 
   return (
-    <article className={lexend.className}>
+    <article className={candyBean.className}>
       <ReactFullpage
         licenseKey="gplv3-license"
         scrollingSpeed={950}

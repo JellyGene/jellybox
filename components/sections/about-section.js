@@ -55,17 +55,22 @@ const AboutSection = () => {
             <p>
               Our specialty is creating top-notch
               <br />
-              short-form animated content for online platforms like{" "}
-              <span className="highlight">Instagram</span>,{" "}
-              <span className="highlight">TikTok</span> and&nbsp;
+              short-form animated content for online
+              <br />
+              platforms like <span className="highlight">Instagram</span>,{" "}
+              <span className="highlight">TikTok</span> and{" "}
               <span className="highlight">YouTube</span>.
             </p>
             <p>
-              Whether you&apos;ve already got an{" "}
-              <span className="highlight">established audience</span>, or if you
-              have an original idea and want to{" "}
-              <span className="highlight">expand your fanbase</span>, we&apos;ll
-              help you create a consistent pipeline of{" "}
+              Whether you&apos;ve already
+              <br />
+              got an <span className="highlight">established audience</span>, or
+              if you have an
+              <br />
+              original idea and want to{" "}
+              <span className="highlight">expand your fanbase</span>,<br />
+              we&apos;ll help you create a consistent pipeline of
+              <br />
               <span className="highlight">amazing animated shorts!</span>
             </p>
           </Blob>
