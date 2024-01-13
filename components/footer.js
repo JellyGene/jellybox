@@ -15,7 +15,7 @@ const socialGroup = [
   },
   {
     social: "youtube",
-    link: "https://www.youtube.com/@genegoldstein",
+    link: "https://www.youtube.com/@JellyboxStudio",
   },
   {
     social: "discord",
