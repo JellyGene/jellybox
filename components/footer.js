@@ -27,18 +27,21 @@ const socialGroup = [
   },
 ];
 
-const SocialList = () => {
+const SocialList = ({ socials }) => {
   return (
     <ul>
-      {socialGroup.map((object, index) => {
+      {socials.map((social) => {
         return (
-          <li key={index}>
-            <a title={`link to ${object.social}`} href={object.link}>
+          <li key={social.sys.id}>
+            <a
+              title={`link to ${social.fields.title}`}
+              href={social.fields.link}
+            >
               <Image
-                alt={object.social}
+                alt={social.fields.title}
                 width={65}
                 height={65}
-                src={`/socials/${object.social}.png`}
+                src={`https:${social.fields.image.fields.file.url}`}
               />
             </a>
           </li>
@@ -48,7 +51,7 @@ const SocialList = () => {
   );
 };
 
-const Footer = ({ children }) => {
+const Footer = ({ socials }) => {
   const { ref, inView } = useInView({
     threshold: 0,
     triggerOnce: true,
@@ -61,7 +64,7 @@ const Footer = ({ children }) => {
       <div
         className={`foot-wrapper flx column center ${inView ? "loaded" : ""}`}
       >
-        <SocialList />
+        <SocialList socials={socials} />
         <div>
           <span className="uppercase legal">&copy; Jellybox 2023</span>
         </div>

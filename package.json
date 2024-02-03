@@ -11,8 +11,10 @@
     "vercel-build": "yum install gcc-c++ cairo-devel pango-devel libjpeg-turbo-devel giflib-devel"
   },
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^15.19.4",
     "@fullpage/react-fullpage": "^0.1.40",
     "canvas": "^2.11.2",
+    "contentful": "^10.6.19",
     "eslint": "8.48.0",
     "eslint-config-next": "13.4.19",
     "jsdom": "^22.1.0",

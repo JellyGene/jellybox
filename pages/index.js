@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 import Footer from "../components/footer";
 import SectionWrapper from "../components/sections/section-wrapper";
@@ -8,25 +8,25 @@ import WorkSection from "../components/sections/work-section";
 import ServicesSection from "../components/sections/services-section";
 import ContactSection from "../components/sections/contact-section";
 
-const Landing = () => {
+const Landing = (props) => {
   return (
     <>
       <SectionWrapper className="section-home">
         <HomeSection />
       </SectionWrapper>
       <SectionWrapper className="section-about">
-        <AboutSection />
+        <AboutSection pages={props.pages} />
       </SectionWrapper>
       <SectionWrapper className="section-services">
-        <ServicesSection />
+        <ServicesSection pages={props.pages} />
       </SectionWrapper>
       <SectionWrapper className="section-work">
-        <WorkSection />
+        <WorkSection pages={props.pages} work={props.work} />
       </SectionWrapper>
       <SectionWrapper className="section-contact">
         <ContactSection />
       </SectionWrapper>
-      <Footer />
+      <Footer socials={props.socials} />
     </>
   );
 };
