@@ -19,6 +19,7 @@ const ContactSection = () => {
         <div className="email" style={style}>
           business@jellybox.studio
         </div>
+        <ContactForm />
       </div>
       <BubbleCanvas />
     </>
