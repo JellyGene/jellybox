@@ -6,7 +6,7 @@ const style = {
   backgroundColor: "#fff",
   borderRadius: "20px",
   fontSize: "18px",
-  padding: "6px 12px",
+  padding: "10px 15px",
 };
 
 const ContactSection = () => {
