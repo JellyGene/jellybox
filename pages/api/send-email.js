@@ -4,9 +4,8 @@ import nodemailer from "nodemailer";
 export default async (req, res) => {
   const { name, email, message } = req.body;
   const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 465,
-    secure: true,
+    host: "mail.smtp2go.com",
+    port: 587,
     auth: {
       user: process.env.SMTP_USER,
       pass: process.env.SMTP_PASSWORD,
@@ -15,8 +14,8 @@ export default async (req, res) => {
 
   try {
     await transporter.sendMail({
-      from: email,
-      to: "gene@jellybox.studio",
+      from: process.env.SMTP_SENDER,
+      to: process.env.SMTP_SENDER,
       subject: `Contact form submission from ${name}`,
       html: `<p>You have a contact form submission</p><br>
         <p><strong>Email: </strong> ${email}</p><br>
