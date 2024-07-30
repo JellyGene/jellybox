@@ -50,6 +50,12 @@ const Menu = () => {
         >
           <span className="text-hide">Contact</span>
         </Link>
+        <Link
+          className={`${styles["menu-item"]} ${styles["menu-item-shop"]}`}
+          href="https://jellybox.bigcartel.com/"
+        >
+          <span className="text-hide">Shop</span>
+        </Link>
       </div>
     </nav>
   );
