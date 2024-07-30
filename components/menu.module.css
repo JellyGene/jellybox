@@ -26,6 +26,9 @@
 .menu .menu-item.menu-item-contact {
   background-image: url("/menu/menu-contact.png");
 }
+.menu .menu-item.menu-item-shop {
+  background-image: url("/menu/menu-shop.png");
+}
 
 @media (max-width: 1400px) {
   .menu .title img {
